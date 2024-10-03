@@ -2,9 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavItem from './NavItem';
 import SocialIcons from './SocialIcons';
+import BannerFooter from './BannerFooter';
 
 const Footer = () => {
   return (
+  <>
+    <BannerFooter/>
     <footer className="bg-black p-6 text-center text-white rounded-3xl">
       <div className="container mx-auto flex flex-row justify-between gap-3 p-6 border-b-2 border-gray-500">
         {/* Logo Section */}
@@ -32,7 +35,8 @@ const Footer = () => {
                 <p>Hossam Saieed</p>
             </div>
       </div>
-    </footer>
+      </footer>
+      </>
   );
 };
 
