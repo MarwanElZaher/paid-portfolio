@@ -7,11 +7,13 @@ import About from './pages/About'
 import Navbar from './components/NavBar';
 import Portfolio from './pages/Portfolio';
 import Footer from './components/Footer';
+import ScrollToTop from './hooks/scrollToTop';
 
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />

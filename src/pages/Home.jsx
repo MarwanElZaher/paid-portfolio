@@ -35,7 +35,7 @@ const Home = () => {
                 Hossam Saieed
                 </h1>
               </div>
-            <img className='z-10' src={Video} alt="video" />
+            <img className='z-10 w-full' src={Video} alt="video" />
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@ const Home = () => {
         </div>
       
       </section>
-      <section className="flex flex-col justify-around items-start min-h-96">
+      <section className="flex flex-col justify-around items-start my-12 min-h-96">
         <h1 className='uppercase font-medium text-7xl px-10 m-1'>{whatIcanDoTitle}</h1>
         <div className='flex flex-row'>
           {providedServices.map((service, index) => (

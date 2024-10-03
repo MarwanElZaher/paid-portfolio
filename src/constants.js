@@ -12,6 +12,8 @@ export const recentProjectsTitleSecondPart = "Projects"
 export const bannerFooterFirstText = "Connect With Me for Creative Collaboration!"
 export const bannerFooterSecondText = "Reach out and let's bring your ideas to life! I'm here to collaborate and create digital magic."
 export const whatIcanDoTitle = "What i can do";
+export const aboutTitle = "behind the creativity";
+export const aboutDescription = "I am a passionate and versatile UI/UX designer and product designer, weaving a tapestry of digital experiences that inspire and engage."
 export const recentProjects = [
     {
       imgSrc: FirstProjectImg,

@@ -15,9 +15,9 @@ const Navbar = () => {
 
         <ul className="list-none flex flex-row gap-3">
           <NavItem to="/portfolio">Portfolio</NavItem>
+          <NavItem to="/about">About</NavItem>
           <NavItem to="/services">Services</NavItem>
           <NavItem to="/contactme">Contact Me</NavItem>
-          <NavItem to="/about">About</NavItem>
         </ul>
       </nav>
       <MarqueeBar />

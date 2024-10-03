@@ -28,10 +28,10 @@ const Card = ({ imgSrc, imgAlt, cardTitle, bgColor1, bgColor2, buttonBgColor, te
         <div className={`flex flex-row rounded-2xl overflow-hidden p-10 m-8 ${bgColor1} shadow-lg transition-all duration-300 hover:shadow-xl hover:rounded-2xl`}>
           <div className="flex flex-col gap-3">
             <h2 className="text-lg font-bold uppercase">{cardTitle}</h2>
-            <p>{description}</p>
+            <p className="text-gray-500 text-s mr-4">{description}</p>
           </div>
           <div>
-            <img src={imgSrc} alt={imgAlt} />
+            <img className="w-60 h-auto" src={imgSrc} alt={imgAlt} />
           </div>
         </div>
       )
