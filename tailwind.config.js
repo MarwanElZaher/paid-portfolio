@@ -6,6 +6,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'custom': ['ClashGrotesk', 'sans-serif'],
+      },
+      fontWeight: {
+        normal: 400,
+        medium: 500,
+        bold: 700,
+      },
       scaleIn: {
         '0%': { transform: 'scale(0.95)', opacity: '0' },
         '100%': { transform: 'scale(1)', opacity: '1' },
