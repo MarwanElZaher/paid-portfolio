@@ -5,7 +5,7 @@ import Vector from '../assets/Vector.svg'
 import footerBG from '../assets/footerBG.png'
 const BannerFooter = () => {
     return (
-        <section className="relative">
+        <section className="relative mt-36">
             <img className="rounded-3xl"
                 src={footerBG}
                 loading="lazy"
@@ -13,7 +13,7 @@ const BannerFooter = () => {
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white gap-20">
                 <img src={Vector} alt="diamondIcon"/>
-                <h2 className="uppercase font-medium text-7xl px-10">
+                <h2 className="uppercase font-clash font-medium text-7xl px-10">
                     {bannerFooterFirstText}
                 </h2>
                 <p className="font-normal text-3xl mx-80">
