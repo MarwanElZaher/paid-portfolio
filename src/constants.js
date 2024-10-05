@@ -116,3 +116,4 @@ export const contactMeWays = [
   }
 ];
 export const formTitle = "Let’s bring your vision to life with actionable results";
+export const contactFormSectionTitle = "Let's Bring Your Project to Life";

@@ -1,6 +1,6 @@
 import React from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import { contactMeDescription, ContactMeSecondSectionTitle, contactMeTitle, contactMeWays, formTitle } from '../constants';
+import { contactFormSectionTitle, contactMeDescription, ContactMeSecondSectionTitle, contactMeTitle, contactMeWays, formTitle } from '../constants';
 import hossamContactMe from '../assets/hossamContactMe.png'
 import contactMeBesideForm from '../assets/contactMeBesideForm.png'
 import Card from '../components/Card';
@@ -71,6 +71,13 @@ const ContactMe = () => {
        </div>
       </section>
       <section className="w-full h-auto overflow-hidden my-36">
+        <div className='flex justify-center items-center'>
+          <h1
+          className='w-1/3 uppercase cursor-default text-center font-clash font-medium text-6xl mb-10'
+            >
+              {contactFormSectionTitle}
+            </h1>
+          </div>
         <div className='flex flex-row justify-between'>
           <div className='p-10 bg-black rounded-3xl'>
             <h2
