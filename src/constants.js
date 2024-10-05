@@ -35,7 +35,13 @@ export const statistics = [
     description: "Implemented two innovative solutions, showcasing a proactive approach to problem-solving and staying ahead of industry standards."
   }
 ];
-
+export const lastPositionTitle = "Last Position";
+export const lastPositionDescription = "I have contributed to multiple impactful projects, including revamping interfaces for PBPM and PSIM, enhancing usability and decision-making in critical situations. My work spans user-friendly automation tools, mobile apps for documenting street incidents, and B2B/B2C side projects like governorate and security apps. Through research, testing, and design improvements, I helped increase product sales and customer satisfaction while continuing to contribute even during my military service."
+export const positionTitle = "Product Designer"
+export const companyName = "@Penta-b"
+export const positionDuration = "Dec  2021  -  Present"
+export const positionDuties = "Products/ Projects"
+export const positionDutiesExamples = ["PBPM web app", 'PSIM web app', "Collector app", "Alex app", "FGIC", "Olympic Dashboard", "TMG"];
 export const valuedClients = "My Valued Clients"
 // services section
 export const serviceTitle = "My tech Services"
