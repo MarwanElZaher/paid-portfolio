@@ -66,7 +66,7 @@ const ContactMe = () => {
               description={way.description}
               imgSrc={way.image }
               imgAlt={`${way.title} img`}
-              bgColor1="bg-[#EFEFEC]"
+              bgColor1="bg-[#E6E6E3]"
             />
             ))}  
        </div>
