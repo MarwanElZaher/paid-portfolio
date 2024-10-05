@@ -50,7 +50,7 @@ const ContactForm = () => {
   return (
     <form>
       <div className="mb-6">
-        <label className="block text-[#F8F8F599] mb-2">
+        <label className="block text-[#F8F8F599] font-clash mb-2">
           Full Name
         </label>
         <input
@@ -59,14 +59,14 @@ const ContactForm = () => {
             value={formData.fullName}
             onChange={handleChange}
             placeholder="Enter your full name"
-            className={`w-full p-2 bg-black rounded-xl text-white placeholder-[#F8F8F599] border ${errors?.fullName ? 'border-red-500' : 'border-[#F8F8F599]'} focus:outline-none focus:ring-2 focus:ring-gray-500`}
+            className={`w-full p-4 bg-black rounded-xl text-white placeholder-[#F8F8F599] border ${errors?.fullName ? 'border-red-500' : 'border-[#F8F8F599]'} focus:outline-none focus:ring-2 focus:ring-gray-500`}
             required
           />
           {errors?.fullName && <p className="text-red-500 text-sm">{errors?.fullName}</p>}
       </div>
 
       <div className="mb-6">
-        <label className="block text-[#F8F8F599] mb-2">
+        <label className="block text-[#F8F8F599] font-clash mb-2">
           Email
         </label>
         <input
@@ -75,14 +75,14 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Enter your email"
-            className={`w-full p-2 bg-black rounded-xl text-white placeholder-[#F8F8F599] border ${errors?.email ? 'border-red-500' : 'border-[#F8F8F599]'} focus:outline-none focus:ring-2 focus:ring-gray-500`}
+            className={`w-full p-4 bg-black rounded-xl text-white placeholder-[#F8F8F599] border ${errors?.email ? 'border-red-500' : 'border-[#F8F8F599]'} focus:outline-none focus:ring-2 focus:ring-gray-500`}
             required
           />
           {errors?.email && <p className="text-red-500 text-sm">{errors?.email}</p>}
       </div>
 
       <div className="mb-6">
-        <label className="block text-[#F8F8F599] mb-2">
+        <label className="block text-[#F8F8F599] font-clash mb-2">
           Message
          </label>
          <textarea
@@ -90,7 +90,7 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             placeholder="Enter your message"
-            className={`w-full p-2 bg-black rounded-xl text-white placeholder-[#F8F8F599] border ${errors?.message ? 'border-red-500' : 'border-[#F8F8F599]'} focus:outline-none focus:ring-2 focus:ring-gray-500`}
+            className={`w-full p-4 bg-black rounded-xl text-white placeholder-[#F8F8F599] border ${errors?.message ? 'border-red-500' : 'border-[#F8F8F599]'} focus:outline-none focus:ring-2 focus:ring-gray-500`}
             required
           />
           {errors?.message && <p className="text-red-500 text-sm">{errors?.message}</p>}
