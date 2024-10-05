@@ -115,7 +115,7 @@ export const contactMeWays = [
     title: "Let's Chat",
     description: "Reach out via phone, and let's discuss how we can turn your ideas into reality.",
     image: secondContactIcon,
-    link: "https://wa.me/+201126260430"
+    link: "tel:+201126260430"
   },
   {
     title: "Schedule a Call",
