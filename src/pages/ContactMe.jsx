@@ -1,8 +1,9 @@
 import React from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import { contactFormSectionTitle, contactMeDescription, ContactMeSecondSectionTitle, contactMeTitle, contactMeWays, formTitle } from '../constants';
+import { contactFormSectionTitle, contactMeDescription, ContactMeSecondSectionTitle, contactMeSlogan, contactMeTitle, contactMeWays, formTitle } from '../constants';
 import hossamContactMe from '../assets/hossamContactMe.png'
 import contactMeBesideForm from '../assets/contactMeBesideForm.png'
+import DiamondIcon from '../assets/Vector.svg'
 import Card from '../components/Card';
 import ContactForm from '../components/ContactForm';
 const ContactMe = () => {
@@ -91,6 +92,21 @@ const ContactMe = () => {
           </div>
           <img className='w-2/3' src={contactMeBesideForm} alt='cubes-img'/>
         </div>
+      </section>
+      <section className="w-full h-auto overflow-hidden my-36">
+        <div className='flex flex-col justify-center items-center m-10 p-10 '>
+        <img
+            src={DiamondIcon}
+            loading="lazy"
+            alt=""
+            className="w-12 h-12 mb-10"
+          />
+        <h1
+          className='w-4/5 uppercase cursor-default text-center font-clash font-medium text-7xl mb-10'
+        >
+          {contactMeSlogan}
+          </h1>
+          </div>
       </section>
     </main>
   );
