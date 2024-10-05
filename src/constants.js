@@ -118,3 +118,6 @@ export const contactMeWays = [
 export const formTitle = "Let’s bring your vision to life with actionable results";
 export const contactFormSectionTitle = "Let's Bring Your Project to Life";
 export const contactMeSlogan = "Transform your vision into a digital reality. It all starts with a simple message!"
+export const mailSentMsg = "Your Message Has Been Sent"
+export const mailMsgNotice = "You can expect a response within 24 hours. Stay tuned for some fantastic news!"
+export const resendAMsg = "new Message"

@@ -1,6 +1,6 @@
 import React from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import { contactFormSectionTitle, contactMeDescription, ContactMeSecondSectionTitle, contactMeSlogan, contactMeTitle, contactMeWays, formTitle } from '../constants';
+import { contactFormSectionTitle, contactMeDescription, ContactMeSecondSectionTitle, contactMeSlogan, contactMeTitle, contactMeWays } from '../constants';
 import hossamContactMe from '../assets/hossamContactMe.png'
 import contactMeBesideForm from '../assets/contactMeBesideForm.png'
 import DiamondIcon from '../assets/Vector.svg'
@@ -80,15 +80,8 @@ const ContactMe = () => {
             </h1>
           </div>
         <div className='flex flex-row justify-between'>
-          <div className='p-10 bg-black rounded-3xl'>
-            <h2
-            className="w-2/3 text-white uppercase cursor-default font-clash font-medium text-3xl mb-10"
-            >
-              {formTitle}
-            </h2>
-            <div>
+          <div className='p-10 bg-black rounded-3xl flex flex-col justify-center'>
               <ContactForm/>
-              </div>
           </div>
           <img className='w-2/3' src={contactMeBesideForm} alt='cubes-img'/>
         </div>

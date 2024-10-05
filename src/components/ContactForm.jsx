@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import sentIcon from '../assets/sentIcon.svg';
+import { formTitle, mailMsgNotice, mailSentMsg, resendAMsg } from '../constants';
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -8,7 +9,7 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({});
-
+  const [msgSent, setMsgSent] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -41,13 +42,33 @@ const ContactForm = () => {
       const body = `Full Name: ${fullName}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
       
       window.location.href = `mailto:webdesignhossam@gmail.com?subject=${subject}&body=${body}`;
-      setErrors(null)
+      setErrors({});
+      setMsgSent(true);
     } else {
       setErrors(newErrors);
     }
   };
 
+  const handleSendingNewMsg = () => {
+    setMsgSent(false);
+    setFormData(prevData => ({ ...prevData, message: "" }));
+  }
   return (
+  <>
+      {msgSent ?
+        <div className='flex flex-col justify-center items-center mx-10 transition-all animate-scaleIn duration-600'>
+          <img className="w-12 h-12 mb-10" src={sentIcon} alt='sent-icon' />
+          <h2 className='text-center text-white font-clash font-medium text-4xl mb-5'>{mailSentMsg}</h2>
+          <p className='text-white text-center font-clash font-normal text-lg mx-20 mb-10'>{mailMsgNotice}</p>
+          <button onClick={handleSendingNewMsg} className="block font-clash font-medium rounded-full uppercase transition-all duration-250 ease-in-out bg-white text-black py-3 px-6 duration-300 hover:bg-gray-300">{resendAMsg}</button>
+        </div>
+    :
+    <div className='transition-all animate-scaleIn duration-600'>
+    <h2
+    className="w-2/3 text-white uppercase cursor-default font-clash font-medium text-3xl mb-10"
+    >
+      {formTitle}
+    </h2>
     <form>
       <div className="mb-6">
         <label className="block text-[#F8F8F599] font-clash mb-2">
@@ -104,7 +125,10 @@ const ContactForm = () => {
       >
         Send Message
       </button>
-    </form>
+          </form>
+          </div>
+        }
+    </>
   );
 };
 
