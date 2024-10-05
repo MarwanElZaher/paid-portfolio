@@ -106,21 +106,25 @@ export const contactMeDescription = "Feel free to reach out and commence the jou
 export const ContactMeSecondSectionTitle = "Reach Out & Connect";
 export const contactMeWays = [
   {
-    "title": "Drop a Message",
-    "description": "For inquiries, collaborations, or just to say hello, feel free to send an email.",
-    "image": firstContactIcon
+    title: "Drop a Message",
+    description: "For inquiries, collaborations, or just to say hello, feel free to send an email.",
+    image: firstContactIcon,
+    link: "mailto:webdesignhossam@gmail.com"
   },
   {
-    "title": "Let's Chat",
-    "description": "Reach out via phone, and let's discuss how we can turn your ideas into reality.",
-    "image": secondContactIcon
+    title: "Let's Chat",
+    description: "Reach out via phone, and let's discuss how we can turn your ideas into reality.",
+    image: secondContactIcon,
+    link: "https://wa.me/+201126260430"
   },
   {
-    "title": "Schedule a Call",
-    "description": "For a more in-depth conversation or if you have a specific project in mind.",
-    "image": thirdContactIcon
+    title: "Schedule a Call",
+    description: "For a more in-depth conversation or if you have a specific project in mind.",
+    image: thirdContactIcon,
+    link: "https://calendar.google.com/calendar"
   }
 ];
+
 export const formTitle = "Let’s bring your vision to life with actionable results";
 export const contactFormSectionTitle = "Let's Bring Your Project to Life";
 export const contactMeSlogan = "Transform your vision into a digital reality. It all starts with a simple message!"

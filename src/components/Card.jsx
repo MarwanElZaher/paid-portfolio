@@ -1,4 +1,4 @@
-const Card = ({ imgSrc, imgAlt, cardTitle, bgColor1, bgColor2, buttonBgColor, technologies, cardType, description }) => {
+const Card = ({ imgSrc, imgAlt, cardTitle, bgColor1, bgColor2, buttonBgColor, technologies, cardType, description, onClick }) => {
   return (
     cardType == "vertical" ? (
     <div className={`flex flex-col rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:rounded-2xl`}>
@@ -35,7 +35,9 @@ const Card = ({ imgSrc, imgAlt, cardTitle, bgColor1, bgColor2, buttonBgColor, te
         </div>)
         : cardType == "verticalSmall" ?
           (
-          <div className={`flex flex-col justify-around rounded-2xl overflow-hidden p-10 m-8 border-2 gap-3  border-[#E6E6E3] ${bgColor1}`}>
+            <div
+              onClick={onClick}
+              className={`flex flex-col justify-around rounded-2xl overflow-hidden p-10 m-8 border-2 gap-3  border-[#E6E6E3] ${bgColor1} cursor-pointer transition-all duration-500 scale-95 hover:scale-105 hover: shadow-gray-300 shadow-md hover:border-gray-500 `}>
              <div className="flex justify-center items-start">
                 <img className="w-30 h-auto pb-4" src={imgSrc} alt={imgAlt} />
               </div>

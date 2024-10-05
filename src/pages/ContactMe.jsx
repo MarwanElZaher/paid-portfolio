@@ -67,7 +67,8 @@ const ContactMe = () => {
               imgSrc={way.image }
               imgAlt={`${way.title} img`}
               bgColor1="bg-[#E6E6E3]"
-            />
+              onClick={() => window.open(way.link, "_blank")}
+              />
             ))}  
        </div>
       </section>
