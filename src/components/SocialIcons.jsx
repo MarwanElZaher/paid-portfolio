@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp, faFacebook, faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp, faLinkedin, faInstagram, faBehance } from '@fortawesome/free-brands-svg-icons';
 
 const SocialIcons = () => {
   const openLink = (url) => {
@@ -15,24 +15,19 @@ const SocialIcons = () => {
         onClick={() => openLink('https://wa.me/+201126260430')}
       />
       <FontAwesomeIcon 
-        icon={faFacebook} 
-        className="text-white opacity-70 text-2xl cursor-pointer hover:text-blue-600"
-        onClick={() => openLink('https://www.facebook.com/hossam')}
+        icon={faInstagram} 
+        className="text-white opacity-70 text-2xl cursor-pointer hover:text-pink-500"
+        onClick={() => openLink('https://www.instagram.com/hossam.saieed/profilecard/')}
       />
       <FontAwesomeIcon 
         icon={faLinkedin} 
         className="text-white opacity-70 text-2xl cursor-pointer hover:text-blue-700"
-        onClick={() => openLink('https://www.linkedin.com/in/your-profile/')}
+        onClick={() => openLink('https://www.linkedin.com/in/hossam-saieed-56ba37207/')}
       />
       <FontAwesomeIcon 
-        icon={faGithub} 
-        className="text-white opacity-70 text-2xl cursor-pointer hover:text-gray-400"
-        onClick={() => openLink('https://github.com/your-github-username')}
-      />
-      <FontAwesomeIcon 
-        icon={faTwitter} 
+        icon={faBehance} 
         className="text-white opacity-70 text-2xl cursor-pointer hover:text-blue-400"
-        onClick={() => openLink('https://twitter.com/your-twitter-handle')}
+        onClick={() => openLink('https://www.behance.net/hossam-Saieed')}
       />
     </div>
   );
