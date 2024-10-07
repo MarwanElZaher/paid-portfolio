@@ -1,19 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MarqueeBar from './MarqueeBar';
 import NavItem from './NavItem';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
-      <nav className='flex flex-row justify-between items-center p-8'>
+      <nav className='flex flex-row justify-between items-center p-8 bg-white'>
         <div>
-          <h1 className='font-clash font-clash font-bold text-2xl'>
+          <h1 className='font-clash font-bold text-2xl'>
             <Link to="/">HS</Link>
           </h1>
         </div>
 
-        <ul className="list-none flex flex-row gap-3">
+        {/* Hamburger Icon */}
+        <div className="block md:hidden">
+          <button onClick={toggleMenu} className="focus:outline-none">
+            {/* Icon (could be SVG or FontAwesome) */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Navigation Links */}
+        <ul className={`list-none flex flex-row gap-3 md:flex md:gap-5 ${isMenuOpen ? 'flex-col absolute top-16 left-0 bg-white shadow-md p-4 w-full z-50' : 'hidden'}`}>
           <NavItem to="/portfolio">Portfolio</NavItem>
           <NavItem to="/about">About</NavItem>
           <NavItem to="/services">Services</NavItem>
@@ -24,4 +48,5 @@ const Navbar = () => {
     </>
   );
 };
+
 export default Navbar;
