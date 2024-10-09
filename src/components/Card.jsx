@@ -24,14 +24,14 @@ const Card = ({
             <button
               key={index}
               title={tech}
-              className={`py-2 px-4 uppercase rounded-full font-semibold text-white ${index > 0 ? buttonBgColor : "bg-black text-white opacity-70"}`}
+              className={`py-2 px-4 uppercase rounded-full font-medium text-sm text-white ${index > 0 ? buttonBgColor : "bg-black text-white opacity-70"}`}
               disabled
             >
               {tech}
             </button>
           ))}
         </div>
-        <h2 className="text-2xl md:text-3xl font-clash font-bold uppercase">{cardTitle}</h2>
+        <h4 className="text-xl md:text-2xl lg:text-3xl font-custom font-medium uppercase">{cardTitle}</h4>
       </div>
     </div>
   ) : cardType === "about" ? (
@@ -50,17 +50,17 @@ const Card = ({
       <div className="flex justify-center items-start">
         <img className="w-full h-auto pb-4" src={imgSrc} alt={imgAlt} />
       </div>
-      <h2 className="flex flex-col items-center text-2xl md:text-3xl font-clash font-bold">{cardTitle}</h2>
+      <h2 className="flex flex-col items-center text-2xl md:text-3xl font-custom font-bold">{cardTitle}</h2>
       <p className="flex flex-col items-center text-gray-500 text-sm md:text-base text-center">{description}</p>
     </div>
   ) : (
-    <div className={`flex flex-col md:flex-row justify-between rounded-2xl overflow-hidden p-6 m-4 border-2 border-[#E6E6E3] ${bgColor1}`}>
-      <div className="flex flex-col w-full md:w-2/3">
-        <h2 className="text-lg md:text-xl font-clash font-bold">{cardTitle}</h2>
+    <div className={`flex flex-col-reverse md:flex-col-reverse lg:flex-row items-start justify-between rounded-2xl gap-8 overflow-hidden p-6 m-4 border-2 border-[#E6E6E3] ${bgColor1}`}>
+      <div className="flex flex-col w-full md:w-2/3 gap-5">
+        <h3 className="text-lg md:text-3xl font-custom font-medium">{cardTitle}</h3>
         <p className="text-gray-500 text-sm md:text-base">{description}</p>
       </div>
-      <div className="flex justify-end items-start">
-        <img className="w-full md:w-30 h-auto" src={imgSrc} alt={imgAlt} />
+      <div className="flex justify-start items-start lg:justify-start">
+        <img className="w-1/2 md:w-full lg:w-full h-auto" src={imgSrc} alt={imgAlt} />
       </div>
     </div>
   );

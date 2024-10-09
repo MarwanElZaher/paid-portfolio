@@ -27,15 +27,14 @@ const Services = () => {
           {/* Left section: Title and description */}
           <div className="w-full md:w-2/3 flex flex-col justify-center items-start p-10">
             <div
-              className={`transition-all duration-1000 ${
-                videoVisible
+              className={`transition-all duration-1000 ${videoVisible
                   ? 'translate-y-0 opacity-100'
                   : 'translate-y-20 opacity-0'
-              }`}
+                }`}
             >
               <h1
                 ref={videoRef}
-                className="uppercase cursor-default font-clash font-medium text-6xl md:text-9xl w-full mb-4"
+                className="uppercase cursor-default font-custom font-medium text-6xl md:text-9xl w-full mb-4"
               >
                 {serviceTitle}
               </h1>
@@ -59,7 +58,7 @@ const Services = () => {
 
       {/* Services Section */}
       <section className="flex flex-col justify-around items-start my-20 min-h-96">
-        <h1 className='uppercase font-clash font-medium text-5xl md:text-7xl px-10'>{secondSectionTitle}</h1>
+        <h1 className='uppercase font-custom font-medium text-5xl md:text-7xl px-10'>{secondSectionTitle}</h1>
         <div className='flex flex-col md:flex-row md:gap-4'>
           {providedServices.map((service, index) => (
             <Card
@@ -85,7 +84,7 @@ const Services = () => {
                 alt=""
                 className="w-12 h-12 mr-4"
               />
-              <h2 className='text-4xl md:text-6xl font-clash font-medium uppercase'>
+              <h2 className='text-4xl md:text-6xl font-custom font-medium uppercase'>
                 {thirdSectionTitle}
               </h2>
             </div>

@@ -14,7 +14,7 @@ const Navbar = () => {
     <>
       <nav className='flex flex-row justify-between items-center p-8 bg-white'>
         <div>
-          <h1 className='font-clash font-bold text-2xl'>
+          <h1 className='font-custom font-bold text-2xl'>
             <Link to="/">HS</Link>
           </h1>
         </div>

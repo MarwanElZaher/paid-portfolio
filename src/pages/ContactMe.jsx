@@ -11,14 +11,14 @@ const ContactMe = () => {
   const { ref: videoRef, isVisible: videoVisible } = useIntersectionObserver({
     threshold: 0.2,
   });
-  
+
   return (
     <main>
       <section className="w-full h-auto overflow-hidden my-10">
         <div className="flex flex-col md:flex-row w-full">
           <div className="w-full md:w-2/3 flex flex-col justify-center items-start p-5 md:p-10">
             <div className={`transition-all duration-1000 ${videoVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-              <h1 ref={videoRef} className="uppercase cursor-default font-clash font-medium text-5xl md:text-9xl mb-8">
+              <h1 ref={videoRef} className="uppercase cursor-default font-custom font-medium text-5xl md:text-9xl mb-8">
                 {contactMeTitle}
               </h1>
               <div className='pr-0 md:pr-48'>
@@ -35,7 +35,7 @@ const ContactMe = () => {
 
       <section className="w-full h-auto overflow-hidden my-36 px-5 md:px-10">
         <div className='flex flex-col items-center'>
-          <h1 className="uppercase cursor-default text-center font-clash font-medium text-4xl md:text-6xl mb-10">
+          <h1 className="uppercase cursor-default text-center font-custom font-medium text-4xl md:text-6xl mb-10">
             {ContactMeSecondSectionTitle}
           </h1>
         </div>
@@ -46,7 +46,7 @@ const ContactMe = () => {
               cardType="verticalSmall"
               cardTitle={way.title}
               description={way.description}
-              imgSrc={way.image }
+              imgSrc={way.image}
               imgAlt={`${way.title} img`}
               bgColor1="bg-[#E6E6E3]"
               onClick={() => window.open(way.link, "_blank")}
@@ -57,7 +57,7 @@ const ContactMe = () => {
 
       <section className="w-full h-auto overflow-hidden my-36">
         <div className='flex justify-center items-center'>
-          <h1 className='uppercase cursor-default text-center font-clash font-medium text-4xl md:text-6xl mb-10'>
+          <h1 className='uppercase cursor-default text-center font-custom font-medium text-4xl md:text-6xl mb-10'>
             {contactFormSectionTitle}
           </h1>
         </div>
@@ -72,7 +72,7 @@ const ContactMe = () => {
       <section className="w-full h-auto overflow-hidden my-36">
         <div className='flex flex-col justify-center items-center m-5 p-10'>
           <img src={DiamondIcon} loading="lazy" alt="" className="w-12 h-12 mb-10" />
-          <h1 className='uppercase cursor-default text-center font-clash font-medium text-5xl md:text-7xl mb-10'>
+          <h1 className='uppercase cursor-default text-center font-custom font-medium text-5xl md:text-7xl mb-10'>
             {contactMeSlogan}
           </h1>
         </div>

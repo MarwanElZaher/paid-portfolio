@@ -42,7 +42,7 @@ const ContactForm = () => {
       const { fullName, email, message } = formData;
       const subject = `Message from ${fullName}`;
       const body = `Full Name: ${fullName}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
-      
+
       window.location.href = `mailto:webdesignhossam@gmail.com?subject=${subject}&body=${body}`;
       setErrors({});
       setMsgSent(true);
@@ -61,18 +61,18 @@ const ContactForm = () => {
       {msgSent ? (
         <div className='flex flex-col justify-center items-center mx-5 md:mx-10 transition-all animate-scaleIn duration-600'>
           <img className="w-12 h-12 mb-10" src={sentIcon} alt='sent-icon' />
-          <h2 className='text-center text-white font-clash font-medium text-4xl mb-5'>{mailSentMsg}</h2>
-          <p className='text-white text-center font-clash font-normal text-lg mx-5 md:mx-20 mb-10'>{mailMsgNotice}</p>
-          <button onClick={handleSendingNewMsg} className="block font-clash font-medium rounded-full uppercase transition-all duration-250 ease-in-out bg-white text-black py-3 px-6 duration-300 hover:bg-gray-300">{resendAMsg}</button>
+          <h2 className='text-center text-white font-custom font-medium text-4xl mb-5'>{mailSentMsg}</h2>
+          <p className='text-white text-center font-custom font-normal text-lg mx-5 md:mx-20 mb-10'>{mailMsgNotice}</p>
+          <button onClick={handleSendingNewMsg} className="block font-custom font-medium rounded-full uppercase transition-all duration-250 ease-in-out bg-white text-black py-3 px-6 duration-300 hover:bg-gray-300">{resendAMsg}</button>
         </div>
       ) : (
         <div className='transition-all animate-scaleIn duration-600'>
-          <h2 className="w-full md:w-2/3 text-white uppercase cursor-default font-clash font-medium text-3xl mb-10 text-center">
+          <h2 className="w-full md:w-2/3 text-white uppercase cursor-default font-custom font-medium text-3xl mb-10 text-center">
             {formTitle}
           </h2>
           <form>
             <div className="mb-6">
-              <label className="block text-[#F8F8F599] font-clash mb-2">Full Name</label>
+              <label className="block text-[#F8F8F599] font-custom mb-2">Full Name</label>
               <input
                 type="text"
                 name="fullName"
@@ -86,7 +86,7 @@ const ContactForm = () => {
             </div>
 
             <div className="mb-6">
-              <label className="block text-[#F8F8F599] font-clash mb-2">Email</label>
+              <label className="block text-[#F8F8F599] font-custom mb-2">Email</label>
               <input
                 type="email"
                 name="email"
@@ -100,7 +100,7 @@ const ContactForm = () => {
             </div>
 
             <div className="mb-6">
-              <label className="block text-[#F8F8F599] font-clash mb-2">Message</label>
+              <label className="block text-[#F8F8F599] font-custom mb-2">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -116,7 +116,7 @@ const ContactForm = () => {
             <button
               type="button"
               onClick={handleSendEmail}
-              className="block w-full font-clash font-medium rounded-full uppercase transition-all duration-250 ease-in-out bg-white text-black py-3 duration-300 hover:bg-gray-300"
+              className="block w-full font-custom font-medium rounded-full uppercase transition-all duration-250 ease-in-out bg-white text-black py-3 duration-300 hover:bg-gray-300"
             >
               Send
             </button>

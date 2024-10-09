@@ -7,7 +7,7 @@ import BannerFooter from './BannerFooter';
 const Footer = () => {
   const location = useLocation();
   const isContactFormDisplayed = location.pathname.includes("contactme");
-  
+
   return (
     <>
       {!isContactFormDisplayed && <BannerFooter />}
@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="container mx-auto flex flex-col md:flex-row justify-between gap-6 p-6 border-b-2 border-gray-500">
           {/* Logo Section */}
           <div className="mb-4">
-            <h1 className='font-clash font-bold text-2xl'>
+            <h1 className='font-custom font-bold text-2xl'>
               <Link to="/">HS</Link>
             </h1>
           </div>
@@ -33,7 +33,7 @@ const Footer = () => {
             <SocialIcons />
           </div>
         </div>
-        
+
         {/* Legal Information */}
         <div className="text-gray-500 text-sm font-normal flex flex-col md:flex-row justify-between pt-6 px-4">
           <p>© 2024, All Rights Reserved</p>

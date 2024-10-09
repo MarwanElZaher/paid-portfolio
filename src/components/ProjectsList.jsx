@@ -1,10 +1,10 @@
 import React from "react";
 import Card from "./Card";
-const ProjectList = ({RecentProjects}) => {
+const ProjectList = ({ RecentProjects }) => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
             {RecentProjects.map((project, index) => (
-                <Card 
+                <Card
                     cardType="vertical"
                     key={index}
                     imgSrc={project.imgSrc}

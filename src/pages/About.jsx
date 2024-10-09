@@ -2,27 +2,26 @@ import React from "react";
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import firstAboutImg from '../assets/firstAbout.png';
 import secondAboutImg from '../assets/secondAbout.png';
-import { 
-  aboutDescription, 
-  aboutTitle, 
-  companyName, 
-  hossamSignature, 
-  lastPositionDescription, 
-  lastPositionTitle, 
-  positionDuration, 
-  positionDuties, 
-  positionDutiesExamples, 
-  positionTitle, 
-  secondSectionAbout, 
-  statistics, 
-  statisticsCaption, 
-  statisticsTitle, 
-  valuedClients 
+import {
+  aboutDescription,
+  aboutTitle,
+  companyName,
+  hossamSignature,
+  lastPositionDescription,
+  lastPositionTitle,
+  positionDuration,
+  positionDuties,
+  positionDutiesExamples,
+  positionTitle,
+  secondSectionAbout,
+  statistics,
+  statisticsCaption,
+  statisticsTitle,
+  valuedClients
 } from "../constants";
 import DiamondIcon from '../assets/Vector.svg';
 import Card from "../components/Card";
-import VideoAboutTwo from "../assets/videoTwoAbout.png";
-
+import AboutVideoH from '../assets/AboutVideoH.mp4'
 const About = () => {
   const { ref: videoRef, isVisible: videoVisible } = useIntersectionObserver({
     threshold: 0.2,
@@ -32,19 +31,18 @@ const About = () => {
     <main>
       <section className="w-full h-auto overflow-hidden my-10">
         <div className="flex flex-col md:flex-row w-full">
-          
+
           {/* Left section: Title and description */}
           <div className="w-full md:w-2/3 flex flex-col justify-center items-start p-10">
             <div
-              className={`transition-all duration-1000 ${
-                videoVisible
+              className={`transition-all duration-1000 ${videoVisible
                   ? 'translate-y-0 opacity-100'
                   : 'translate-y-20 opacity-0'
-              }`}
+                }`}
             >
               <h1
                 ref={videoRef}
-                className="uppercase cursor-default font-clash font-medium text-5xl md:text-9xl mb-6"
+                className="uppercase cursor-default font-custom font-medium text-5xl md:text-9xl mb-6"
               >
                 {aboutTitle}
               </h1>
@@ -72,7 +70,7 @@ const About = () => {
       <section className="w-full h-auto overflow-hidden mt-36">
         <div className="flex flex-col p-10">
           <div className="text-3xl md:text-5xl font-normal w-full md:w-2/3 mb-6">{secondSectionAbout}</div>
-          <div className="text-gray-600 text-lg md:text-2xl font-clash font-medium">{hossamSignature}</div>
+          <div className="text-gray-600 text-lg md:text-2xl font-custom font-medium">{hossamSignature}</div>
         </div>
       </section>
 
@@ -87,16 +85,16 @@ const About = () => {
               className="w-12 h-12 mb-10"
             />
             <div className="max-w-3xl text-center">
-              <h2 className="text-white text-4xl md:text-6xl font-clash font-medium uppercase mb-6">{statisticsTitle}</h2>
+              <h2 className="text-white text-4xl md:text-6xl font-custom font-medium uppercase mb-6">{statisticsTitle}</h2>
               <p className="text-[#F8F8F599] text-lg md:text-3xl font-light max-w-xl mx-auto mb-6">
                 {statisticsCaption}
               </p>
             </div>
           </div>
-          
+
           {/* Statistics Wrapper */}
           {statistics.map((statistic, index) => (
-            <Card 
+            <Card
               cardType="about"
               key={index}
               cardTitle={statistic.title}
@@ -112,7 +110,7 @@ const About = () => {
             alt=""
             className="w-12 h-12 mb-10"
           />
-          <h2 className="text-white text-4xl md:text-6xl font-clash font-medium uppercase mb-6">{lastPositionTitle}</h2>
+          <h2 className="text-white text-4xl md:text-6xl font-custom font-medium uppercase mb-6">{lastPositionTitle}</h2>
         </div>
 
         <div className="flex flex-col md:flex-row mt-10 gap-4 md:gap-20">
@@ -121,7 +119,7 @@ const About = () => {
               <h2 className="text-white text-5xl md:text-7xl font-normal"> {positionTitle} </h2>
               <p className="text-white text-xl md:text-3xl font-medium">{companyName}</p>
             </div>
-            <p className="text-white font-clash text-lg font-medium py-4">{positionDuration}</p>
+            <p className="text-white font-custom text-lg font-medium py-4">{positionDuration}</p>
             <div className="flex flex-col justify-between items-start my-4">
               <p className="text-white font-medium text-3xl">{positionDuties}</p>
               <ul className="grid grid-cols-2 md:grid-cols-5 gap-2 text-center my-4">
@@ -134,17 +132,19 @@ const About = () => {
             </div>
           </div>
           <div className="w-full md:w-1/3 flex items-center px-4">
-            <p className="text-lg text-center text-[#F8F8F599] font-clash font-normal">{lastPositionDescription}</p>
+            <p className="text-lg text-center text-[#F8F8F599] font-custom font-normal">{lastPositionDescription}</p>
           </div>
         </div>
       </section>
 
-      <img className='w-full h-auto mt-10' src={VideoAboutTwo} alt="video" />
+      <video className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls>
+        <source src={AboutVideoH} type="video/mp4" />
+      </video>
 
       <section className="w-full h-auto overflow-hidden my-36 px-6 md:px-10">
         <div className="flex flex-col">
           <div className="flex justify-center items-center">
-            <p className="font-clash font-medium text-5xl md:text-6xl uppercase mb-12">{valuedClients}</p>
+            <p className="font-custom font-medium text-5xl md:text-6xl uppercase mb-12">{valuedClients}</p>
           </div>
           <div className="flex flex-row border-y-2 border-[#E6E6E3]">
             {/* Insert client logos here */}
