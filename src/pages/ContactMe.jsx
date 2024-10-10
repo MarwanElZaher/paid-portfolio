@@ -39,7 +39,7 @@ const ContactMe = () => {
             {ContactMeSecondSectionTitle}
           </h1>
         </div>
-        <div className='flex flex-col md:flex-row'>
+        <div className='flex flex-col md:flex-col lg:flex-row'>
           {contactMeWays.map((way, index) => (
             <Card
               key={index}
@@ -61,11 +61,11 @@ const ContactMe = () => {
             {contactFormSectionTitle}
           </h1>
         </div>
-        <div className='flex flex-col md:flex-row justify-between'>
+        <div className='flex flex-col md:flex-col lg:flex-row justify-between'>
           <div className='p-5 md:p-10 bg-black rounded-3xl flex flex-col justify-center'>
             <ContactForm />
           </div>
-          <img className='w-full md:w-2/3 mt-5 md:mt-0' src={contactMeBesideForm} alt='cubes-img' />
+          <img className='w-full lg:w-2/3 rounded-3xl' src={contactMeBesideForm} alt='cubes-img' />
         </div>
       </section>
 

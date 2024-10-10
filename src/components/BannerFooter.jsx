@@ -13,12 +13,12 @@ const BannerFooter = () => {
                 loading="lazy"
                 alt="background-img"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white gap-8 md:gap-10"> {/* Adjust gap for smaller screens */}
-                <img src={Vector} alt="diamondIcon" className="w-12 h-12 md:w-16 md:h-16" /> {/* Responsive icon size */}
-                <h2 className="uppercase font-custom font-medium text-4xl md:text-6xl px-5 md:px-10"> {/* Decreased responsive font size */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white gap-2 md:gap-4 lg:gap-12">
+                <img src={Vector} alt="diamondIcon" className="w-8 lg:w-16" />
+                <h2 className="uppercase font-custom font-medium text-2xl md:text-5xl lg:text-7xl px-5 md:px-10 lg:px-20">
                     {bannerFooterFirstText}
                 </h2>
-                <p className="font-normal text-lg md:text-2xl mx-4 md:mx-80"> {/* Decreased responsive font size and margin */}
+                <p className="font-normal text-lg md:text-2xl lg:text-5xl mx-4 md:mx-8 lg:mx-40">
                     {bannerFooterSecondText}
                 </p>
                 <NavItem

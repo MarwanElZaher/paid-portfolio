@@ -67,7 +67,7 @@ const ContactForm = () => {
         </div>
       ) : (
         <div className='transition-all animate-scaleIn duration-600'>
-          <h2 className="w-full md:w-2/3 text-white uppercase cursor-default font-custom font-medium text-3xl mb-10 text-center">
+          <h2 className="w-full md:w-2/3 text-white uppercase cursor-default font-custom font-medium text-3xl mb-10 text-start">
             {formTitle}
           </h2>
           <form>

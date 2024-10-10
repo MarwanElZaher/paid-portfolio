@@ -48,10 +48,10 @@ const Card = ({
       onClick={onClick}
       className={`flex flex-col justify-around rounded-2xl overflow-hidden p-6 m-4 border-2 gap-3 border-[#E6E6E3] ${bgColor1} cursor-pointer transition-all duration-500 scale-95 hover:scale-105 hover:shadow-gray-300 shadow-md hover:border-gray-500`}>
       <div className="flex justify-center items-start">
-        <img className="w-full h-auto pb-4" src={imgSrc} alt={imgAlt} />
+        <img className="w-1/3 md:w-1/3 lg:w-1/2 h-auto" src={imgSrc} alt={imgAlt} />
       </div>
-      <h2 className="flex flex-col items-center text-2xl md:text-3xl font-custom font-bold">{cardTitle}</h2>
-      <p className="flex flex-col items-center text-gray-500 text-sm md:text-base text-center">{description}</p>
+      <h3 className="flex flex-col items-center text-2xl md:text-3xl font-custom font-medium">{cardTitle}</h3>
+      <p className="flex flex-col items-center text-gray-500 text-sm md:text-base md:mx-20 text-center">{description}</p>
     </div>
   ) : (
     <div className={`flex flex-col-reverse md:flex-col-reverse lg:flex-row items-start justify-between rounded-2xl gap-8 overflow-hidden p-6 m-4 border-2 border-[#E6E6E3] ${bgColor1}`}>
