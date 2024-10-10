@@ -36,8 +36,8 @@ const About = () => {
           <div className="w-full md:w-2/3 flex flex-col justify-center items-start p-10">
             <div
               className={`transition-all duration-1000 ${videoVisible
-                  ? 'translate-y-0 opacity-100'
-                  : 'translate-y-20 opacity-0'
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-20 opacity-0'
                 }`}
             >
               <h1
@@ -137,7 +137,7 @@ const About = () => {
         </div>
       </section>
 
-      <video className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls>
+      <video className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline >
         <source src={AboutVideoH} type="video/mp4" />
       </video>
 
