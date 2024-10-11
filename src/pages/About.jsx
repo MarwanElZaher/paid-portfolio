@@ -2,9 +2,9 @@ import React from "react";
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import firstAboutImg from '../assets/firstAbout.png';
 import secondAboutImg from '../assets/secondAbout.png';
-import AHR from '../assets/AHR.png';
-import Group from '../assets/Group.png';
-import Pentab from '../assets/Pentab.png';
+import AHR from '../assets/AHR.svg';
+import Group from '../assets/Group.svg';
+import Pentab from '../assets/Pentab.svg';
 
 import {
   aboutDescription,

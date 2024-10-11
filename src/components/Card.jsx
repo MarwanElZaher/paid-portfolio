@@ -14,13 +14,13 @@ const Card = ({
   return cardType === "vertical" ? (
     <div className={`flex flex-col rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:rounded-2xl cursor-pointer`}>
       {/* Image section with the first background color */}
-      <div className={`${bgColor1} flex justify-center h-3/4 p-20`}>
+      <div className={`${bgColor1} flex justify-center h-3/4 px-8 py-12 md:p-16 lg:p-20`}>
         {imgSrc && <img src={imgSrc} alt={imgAlt} className="w-full h-auto rounded-lg" />}
       </div>
 
       {/* Content section with the second background color */}
-      <div className={`flex flex-col justify-center p-6 h-1/4 ${bgColor2} rounded-b-2xl`}>
-        <div className="flex gap-2 mb-4">
+      <div className={`flex flex-col justify-center py-20 px-5 md:py-10 lg:p-10 h-1/4 ${bgColor2} rounded-b-2xl`}>
+        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-2 gap-2 text-center mb-2">
           {technologies.map((tech, index) => (
             <button
               key={index}
