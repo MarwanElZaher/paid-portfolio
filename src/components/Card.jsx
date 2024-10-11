@@ -1,3 +1,5 @@
+import swal from 'sweetalert';
+
 const Card = ({
   imgSrc,
   imgAlt,
@@ -11,21 +13,31 @@ const Card = ({
   description,
   onClick,
 }) => {
+  const handleProjectView = () => {
+    if (!published) {
+      swal("Oops!", "This project isn't published yet!", "warning");
+    } else {
+      // Replace with your navigation logic
+      window.location.href = `/project-view/${cardTitle}`
+    }
+  }
   return cardType === "vertical" ? (
-    <div className={`flex flex-col rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:rounded-2xl cursor-pointer`}>
+    <div
+      onClick={handleProjectView}
+      className={`flex flex-col rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:rounded-2xl cursor-pointer`}>
       {/* Image section with the first background color */}
-      <div className={`${bgColor1} flex justify-center h-3/4 px-8 py-12 md:p-16 lg:p-20`}>
+      <div className={`${bgColor1} flex justify-center h-3/4 px-8 py-12 md:p-16 lg:py-20 lg:px-10`}>
         {imgSrc && <img src={imgSrc} alt={imgAlt} className="w-full h-auto rounded-lg" />}
       </div>
 
       {/* Content section with the second background color */}
       <div className={`flex flex-col justify-center py-20 px-5 md:py-10 lg:p-10 h-1/4 ${bgColor2} rounded-b-2xl`}>
-        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-2 gap-2 text-center mb-2">
+        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-4 gap-2 text-center mb-2">
           {technologies.map((tech, index) => (
             <button
               key={index}
               title={tech}
-              className={`py-2 px-4 uppercase rounded-full font-medium text-sm ${index > 0 ? buttonBgColor : "bg-[#12120F80] text-white"}`}
+              className={`uppercase rounded-full font-medium text-xs md:text-sm lg:text-xs ${index > 0 ? buttonBgColor : "bg-[#12120F80] text-white"}`}
               disabled
             >
               {tech}
