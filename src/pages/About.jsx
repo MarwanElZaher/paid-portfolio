@@ -129,7 +129,7 @@ const About = () => {
             <p className="text-white font-custom text-lg font-medium py-4">{positionDuration}</p>
             <div className="flex flex-col justify-between items-start my-4">
               <p className="text-white font-medium text-3xl">{positionDuties}</p>
-              <ul className="grid grid-cols-2 md:grid-cols-5 gap-2 text-center my-4">
+              <ul className="flex flex-wrap gap-2 text-center my-4">
                 {positionDutiesExamples.map((duity, index) => (
                   <li className="whitespace-nowrap flex items-center justify-center text-white uppercase rounded-full text-sm px-4 py-2 border-2 border-[#E6E6E3]" key={index}>
                     {duity}
