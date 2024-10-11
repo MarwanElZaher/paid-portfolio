@@ -1,6 +1,7 @@
 import FirstProjectImg from './assets/first.png'
 import SecondProjectImg from './assets/second.png'
 import ThirdProjectImg from './assets/third.png'
+import Collector from "./assets/CollectorProject.svg"
 import serviceIconCube from './assets/IconWrapper.png'
 import serviceIconSearch from './assets/IconWrapper2.png'
 import firstContactIcon from './assets/contactFirst.svg'
@@ -10,7 +11,7 @@ import thirdContactIcon from './assets/contactThird.svg'
 export const homePageSecondSectionText = `I'm a dynamic UI/UX designer / Product Designer
  turning visionary concepts into seamless and impactful digital experiences.`
 export const homePageSecondSectionSecondText = `I am committed to delivering cutting-edge solutions that redefine the digital landscape.`
- export const recentProjectsTitleFirstPart = "Recent"
+export const recentProjectsTitleFirstPart = "Recent"
 export const recentProjectsTitleSecondPart = "Projects"
 export const bannerFooterFirstText = "Connect With Me for Creative Collaboration!"
 export const bannerFooterSecondText = "Reach out and let's bring your ideas to life! I'm here to collaborate and create digital magic."
@@ -50,42 +51,59 @@ export const secondSectionTitle = "My services"
 export const thirdSectionTitle = "Strategic Ingenuity"
 export const thirdSectionFirstParagraph = "In the dynamic world of digital innovation, I specialize in harnessing the power of strategic thinking as a UI/UX and product designer. My expertise lies in crafting user-centered solutions that not only align seamlessly with your unique vision but also exceed expectations."
 export const thirdSectionSecondParagraph = "Whether it's the intricacies of intuitive user interfaces, the seamless experiences demanded by mobile applications, or the thoughtful design of compelling products, each project reflects my commitment to strategic design excellence. I don’t just design; I embark on a collaborative journey where every decision is intentional, and every solution is meticulously tailored to elevate user engagement and drive success."
+//portfolio section 
+export const portfolioTitle = "My Work Portfolio";
 //home section
 export const recentProjects = [
-    {
-      imgSrc: FirstProjectImg,
-      imgAlt: "Project 1 Screenshot",
-      cardTitle: "Project Management App",
-      technologies: ["React", "Tailwind CSS", "Supabase"],
-      firstBgColor: "bg-red-600", // Color 1
-      secondBgColor: "bg-red", // Color 2
-      buttonBgColor: "bg-red-400", //button bg
-      challenge: "Managing complex state with dynamic forms and real-time updates.",
-      approach: "Used React hooks with Supabase for real-time data handling, optimizing the user interface with Tailwind for a responsive design."
-    },
-    {
-      imgSrc: SecondProjectImg,
-      imgAlt: "Project 2 Screenshot",
-      cardTitle: "E-commerce Website",
-      technologies: ["Next.js", "Node.js", "Stripe"],
-      firstBgColor: "bg-blue-600", 
-      secondBgColor: "bg-blue-400", 
-      buttonBgColor: "bg-blue-200", 
-      challenge: "Integrating multiple payment gateways and ensuring a smooth checkout process.",
-      approach: "Built the checkout flow using Stripe and handled secure payments with server-side Node.js integration."
-    },
-    {
-      imgSrc: ThirdProjectImg,
-      imgAlt: "Project 3 Screenshot",
-      cardTitle: "Portfolio Website",
-      technologies: ["Vite", "Tailwind", "Netlify"],
-      firstBgColor: "bg-green-600",
-      secondBgColor: "bg-green-400",
-      buttonBgColor: "bg-green-200",
-      challenge: "Ensuring fast load times and optimizing images for different screen sizes.",
-      approach: "Utilized Vite for build optimization and lazy loading of assets, deployed on Netlify for continuous integration and delivery."
-    }
-  ];
+  {
+    imgSrc: FirstProjectImg,
+    imgAlt: "Project 1 Screenshot",
+    cardTitle: "PBPM",
+    technologies: ["Web App", "bpm", "Revamping", "UIUX"],
+    firstBgColor: "bg-[#0896D4]", // Color 1
+    secondBgColor: "bg-[#56CCF2]", // Color 2
+    buttonBgColor: "border-2 border-[#12120F80]",
+    published: true,
+    challenge: "Managing complex state with dynamic forms and real-time updates.",
+    approach: "Used React hooks with Supabase for real-time data handling, optimizing the user interface with Tailwind for a responsive design."
+  },
+  {
+    imgSrc: SecondProjectImg,
+    imgAlt: "Project 2 Screenshot",
+    cardTitle: "Geo Spatial",
+    technologies: ["Landing page", "GIS", "UIUX"],
+    firstBgColor: "bg-[#DDEA64]",
+    secondBgColor: "bg-[#F9FFC2]",
+    buttonBgColor: "border-2 border-[#12120F80]",
+    published: true,
+    challenge: "Integrating multiple payment gateways and ensuring a smooth checkout process.",
+    approach: "Built the checkout flow using Stripe and handled secure payments with server-side Node.js integration."
+  },
+  {
+    imgSrc: ThirdProjectImg,
+    imgAlt: "Project 3 Screenshot",
+    cardTitle: "MMS",
+    technologies: ["Mobile app", "Desktop app", "Chatting", "UIUX"],
+    firstBgColor: "bg-[#EB6409]",
+    secondBgColor: "bg-[#FBA66C]",
+    buttonBgColor: "border-2 border-[#12120F80]",
+    published: false,
+    challenge: "Ensuring fast load times and optimizing images for different screen sizes.",
+    approach: "Utilized Vite for build optimization and lazy loading of assets, deployed on Netlify for continuous integration and delivery."
+  },
+  {
+    imgSrc: Collector,
+    imgAlt: "Collector Project",
+    cardTitle: "Collector",
+    technologies: ["Mobile app", "Revamping", "UIUX"],
+    firstBgColor: "bg-[#242424]",
+    secondBgColor: "bg-[#C4C4C4]",
+    buttonBgColor: "border-2 border-[#12120F80]",
+    published: false,
+    challenge: "Ensuring fast load times and optimizing images for different screen sizes.",
+    approach: "Utilized Vite for build optimization and lazy loading of assets, deployed on Netlify for continuous integration and delivery."
+  }
+];
 // included in home & services
 export const providedServices = [
   {

@@ -19,7 +19,7 @@ const Home = () => {
             <div className={`transition-all duration-1000 ${videoVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
               <h1
                 ref={videoRef}
-                className="uppercase cursor-default font-custom font-bold text-9xl hover:font-light duration-200 md:text-[8rem] sm:text-[5rem] text-[3rem]"
+                className="uppercase cursor-default font-custom font-bold hover:font-light duration-200 md:text-7xl lg:text-9xl text-5xl"
               >
                 Hossam Saieed
               </h1>
@@ -53,7 +53,10 @@ const Home = () => {
             <p className='uppercase font-custom font-medium text-3xl px-10 m-1 md:text-5xl lg:text-7xl'>{recentProjectsTitleSecondPart}</p>
           </div>
           <div ref={projectsRef} className={`w-full flex flex-col justify-center items-center gap-10 transition-all duration-1000 ${recentProjectsVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <ProjectList RecentProjects={recentProjects} />
+            <ProjectList
+              numberOfCardsToBeRendered={3}
+              RecentProjects={recentProjects}
+            />
             <CustomButton
               className='uppercase rounded-full bg-black text-white p-4 font-custom font-medium hover:bg-[#6e6e6b] hover:scale-110 transition-all duration-300'
               text="View More"

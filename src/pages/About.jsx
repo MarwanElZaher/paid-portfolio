@@ -2,6 +2,10 @@ import React from "react";
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import firstAboutImg from '../assets/firstAbout.png';
 import secondAboutImg from '../assets/secondAbout.png';
+import AHR from '../assets/AHR.png';
+import Group from '../assets/Group.png';
+import Pentab from '../assets/Pentab.png';
+
 import {
   aboutDescription,
   aboutTitle,
@@ -33,7 +37,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row w-full">
 
           {/* Left section: Title and description */}
-          <div className="w-full md:w-2/3 flex flex-col justify-center items-start p-10">
+          <div className="sm:w-2/3 md:w-2/3 lg:w-2/3 flex flex-col justify-center items-start p-10">
             <div
               className={`transition-all duration-1000 ${videoVisible
                 ? 'translate-y-0 opacity-100'
@@ -132,7 +136,7 @@ const About = () => {
             </div>
           </div>
           <div className="w-full md:w-1/3 flex items-center px-4">
-            <p className="text-lg text-center text-[#F8F8F599] font-custom font-normal">{lastPositionDescription}</p>
+            <p className="text-lg text-start text-[#F8F8F599] font-custom font-normal">{lastPositionDescription}</p>
           </div>
         </div>
       </section>
@@ -146,12 +150,11 @@ const About = () => {
           <div className="flex justify-center items-center">
             <p className="font-custom font-medium text-5xl md:text-6xl uppercase mb-12">{valuedClients}</p>
           </div>
-          <div className="flex flex-row border-y-2 border-[#E6E6E3]">
+          <div className="flex flex-col border-y-2 p-10 border-[#E6E6E3] md:flex-row lg:flex-row justify-center gap-10">
             {/* Insert client logos here */}
-            <img src="" alt="Client 1" className="h-16 mx-2" />
-            <img src="" alt="Client 2" className="h-16 mx-2" />
-            <img src="" alt="Client 3" className="h-16 mx-2" />
-            <img src="" alt="Client 4" className="h-16 mx-2" />
+            <img src={AHR} alt="Client 1" className="h-16 mx-2" />
+            <img src={Group} alt="Client 2" className="h-16 mx-2" />
+            <img src={Pentab} alt="Client 3" className="h-16 mx-2" />
           </div>
         </div>
       </section>

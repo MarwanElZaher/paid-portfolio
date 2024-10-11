@@ -7,31 +7,32 @@ const Card = ({
   buttonBgColor,
   technologies,
   cardType,
+  published,
   description,
   onClick,
 }) => {
   return cardType === "vertical" ? (
-    <div className={`flex flex-col rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:rounded-2xl`}>
+    <div className={`flex flex-col rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:rounded-2xl cursor-pointer`}>
       {/* Image section with the first background color */}
-      <div className={`${bgColor1} px-6 md:px-12 py-12 md:py-24`}>
-        {imgSrc && <img src={imgSrc} alt={imgAlt} className="w-full h-auto object-cover rounded-lg" />}
+      <div className={`${bgColor1} flex justify-center h-3/4 p-20`}>
+        {imgSrc && <img src={imgSrc} alt={imgAlt} className="w-full h-auto rounded-lg" />}
       </div>
 
       {/* Content section with the second background color */}
-      <div className={`p-4 md:p-6 ${bgColor2} rounded-b-2xl`}>
+      <div className={`flex flex-col justify-center p-6 h-1/4 ${bgColor2} rounded-b-2xl`}>
         <div className="flex gap-2 mb-4">
           {technologies.map((tech, index) => (
             <button
               key={index}
               title={tech}
-              className={`py-2 px-4 uppercase rounded-full font-medium text-sm text-white ${index > 0 ? buttonBgColor : "bg-black text-white opacity-70"}`}
+              className={`py-2 px-4 uppercase rounded-full font-medium text-sm ${index > 0 ? buttonBgColor : "bg-[#12120F80] text-white"}`}
               disabled
             >
               {tech}
             </button>
           ))}
         </div>
-        <h4 className="text-xl md:text-2xl lg:text-3xl font-custom font-medium uppercase">{cardTitle}</h4>
+        <h4 className="flex flex-row text-xl md:text-2xl lg:text-3xl font-custom font-medium uppercase">{cardTitle} {published ? <span></span> : <div className="flex flex-start"> <span className="font-normal text-sm mx-3 normal-case">Not Published Yet</span> </div>}</h4>
       </div>
     </div>
   ) : cardType === "about" ? (

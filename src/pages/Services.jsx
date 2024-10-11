@@ -25,11 +25,11 @@ const Services = () => {
       <section className="w-full h-auto overflow-hidden my-10">
         <div className="flex flex-col md:flex-row w-full">
           {/* Left section: Title and description */}
-          <div className="w-full md:w-2/3 flex flex-col justify-center items-start p-10">
+          <div className="sm:w-2/3 md:w-2/3 lg:w-2/3 flex flex-col justify-center items-start p-10">
             <div
               className={`transition-all duration-1000 ${videoVisible
-                  ? 'translate-y-0 opacity-100'
-                  : 'translate-y-20 opacity-0'
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-20 opacity-0'
                 }`}
             >
               <h1
