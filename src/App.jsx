@@ -13,16 +13,18 @@ import ScrollToTop from './hooks/scrollToTop';
 const App = () => {
   return (
     <Router>
-      <ScrollToTop/>
-      <Navbar/>
+      <ScrollToTop />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About/>} />
+        <Route path="/about" element={<About />} />
         <Route path="/contactme" element={<ContactMe />} />
+        <Route path="/portfolio/PBPM" element={<ContactMe />} />
+        <Route path="/portfolio/Geo%20Spatial" element={<ContactMe />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 };

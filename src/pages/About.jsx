@@ -1,11 +1,10 @@
 import React from "react";
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import firstAboutImg from '../assets/firstAbout.png';
-import secondAboutImg from '../assets/secondAbout.png';
+import firstAboutImg from '../assets/firstAbout.jpg';
 import AHR from '../assets/AHR.svg';
 import Group from '../assets/Group.svg';
 import Pentab from '../assets/Pentab.svg';
-
+import VerticalView from "../assets/verticalViewAbout.mp4"
 import {
   aboutDescription,
   aboutTitle,
@@ -61,13 +60,17 @@ const About = () => {
           <img
             src={firstAboutImg}
             alt="Hossam IMG"
-            className="w-full md:w-2/3 object-cover mb-4 md:mb-0"
+            className="rounded-3xl w-full md:w-2/3 object-cover"
           />
-          <img
+          <video className='rounded-3xl w-full md:w-1/3 object-cover' autoPlay muted controls={false} loop playsInline>
+
+            <source src={VerticalView} type="video/mp4" />
+          </video>
+          {/* <img
             src={secondAboutImg}
             alt="Hossam small IMG"
             className="rounded-3xl w-full md:w-1/3 object-cover"
-          />
+          /> */}
         </div>
       </section>
 

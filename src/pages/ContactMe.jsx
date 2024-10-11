@@ -1,7 +1,7 @@
 import React from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import { contactFormSectionTitle, contactMeDescription, ContactMeSecondSectionTitle, contactMeSlogan, contactMeTitle, contactMeWays } from '../constants';
-import hossamContactMe from '../assets/hossamContactMe.png';
+import hossamContactMe from '../assets/hossamContactMe.jpg';
 import contactMeBesideForm from '../assets/contactMeBesideForm.png';
 import DiamondIcon from '../assets/Vector.svg';
 import Card from '../components/Card';
@@ -29,7 +29,7 @@ const ContactMe = () => {
         </div>
 
         <div className="flex flex-col w-full mt-8">
-          <img src={hossamContactMe} alt="Hossam IMG" className="w-full object-cover" />
+          <img src={hossamContactMe} alt="Hossam IMG" className="w-full object-cover rounded-3xl" />
         </div>
       </section>
 

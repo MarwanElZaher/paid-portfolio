@@ -5,7 +5,7 @@ import CustomButton from '../components/CustomButton';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import ProjectList from '../components/ProjectsList';
 import Card from '../components/Card';
-import HorizontalView from '../assets/horizontalView.mp4'
+import HomeVideo from '../assets/homeVideo.mp4'
 const Home = () => {
   const { ref: videoRef, isVisible: videoVisible } = useIntersectionObserver({ threshold: 0.2 });
   const { ref: textRef, isVisible: textVisible } = useIntersectionObserver({ threshold: 0.2 });
@@ -26,7 +26,7 @@ const Home = () => {
             </div>
             <video className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline>
 
-              <source src={HorizontalView} type="video/mp4" />
+              <source src={HomeVideo} type="video/mp4" />
             </video>
           </div>
         </div>

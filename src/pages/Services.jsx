@@ -1,8 +1,9 @@
 import React from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import ServicesVideo from '../assets/serviceVideo.png';
-import HossamImage from '../assets/hossamImageServicesSection.png';
+import ServiceImg from '../assets/serviceImg.jpg';
 import DiamondIcon from '../assets/Vector.svg';
+import HorizontalView from '../assets/horizontalView.mp4'
 import {
   providedServices,
   secondSectionTitle,
@@ -48,6 +49,10 @@ const Services = () => {
 
         {/* Images below the content */}
         <div className="flex flex-row w-full mt-8">
+          <video className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline>
+
+            <source src={HorizontalView} type="video/mp4" />
+          </video>
           <img
             src={ServicesVideo}
             alt="Service Video"
@@ -75,8 +80,8 @@ const Services = () => {
       </section>
 
       <section className="w-full h-auto overflow-hidden my-10 px-10">
-        <div className='flex flex-col md:flex-row gap-10'>
-          <div className='flex flex-col justify-around w-full md:w-2/3'>
+        <div className='flex flex-col md:flex-col lg:flex-row gap-10 justify-between'>
+          <div className='flex flex-col justify-around w-full md:w-full lg:w-2/5'>
             <div className='flex items-center mb-4'>
               <img
                 src={DiamondIcon}
@@ -102,9 +107,9 @@ const Services = () => {
             </div>
           </div>
           <img
-            src={HossamImage}
+            src={ServiceImg}
             alt='Hossam'
-            className="w-full md:w-1/3 h-auto"
+            className="w-full md:w-1/3 lg:w-1/3 h-auto rounded-3xl"
           />
         </div>
       </section>
