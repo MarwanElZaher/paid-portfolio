@@ -32,20 +32,20 @@ const Card = ({
       </div>
 
       {/* Content section with the second background color */}
-      <div className={`flex flex-col justify-center py-20 px-5 md:py-10 lg:p-10 h-1/4 ${bgColor2} rounded-b-2xl`}>
-        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-4 gap-2 text-center mb-2">
+      <div className={`flex flex-col justify-between gap-2 py-20 px-5 md:py-10 lg:p-10 h-1/4 ${bgColor2} rounded-b-2xl`}>
+        <div className="flex flex-wrap gap-1">
           {technologies.map((tech, index) => (
             <button
               key={index}
               title={tech}
-              className={`uppercase rounded-full font-medium text-xs md:text-sm lg:text-xs ${index > 0 ? buttonBgColor : "bg-[#12120F80] text-white"}`}
+              className={`uppercase rounded-full font-medium text-xs px-4 py-2 md:text-sm lg:text-xs ${index > 0 ? buttonBgColor : "bg-[#12120F80] text-white"}`}
               disabled
             >
               {tech}
             </button>
           ))}
         </div>
-        <h4 className="flex flex-row text-xl md:text-2xl lg:text-3xl font-custom font-medium uppercase">{cardTitle} {published ? <span></span> : <div className="flex flex-start"> <span className="font-normal text-sm mx-3 normal-case">Not Published Yet</span> </div>}</h4>
+        <h4 className="flex flex-row text-xl md:text-2xl lg:text-3xl font-custom font-medium uppercase p-2">{cardTitle} {published ? <span></span> : <div className="flex flex-start"> <span className="font-normal text-sm mx-3 normal-case">Not Published Yet</span> </div>}</h4>
       </div>
     </div>
   ) : cardType === "about" ? (
