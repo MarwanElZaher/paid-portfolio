@@ -4,6 +4,7 @@ const Card = ({
   imgSrc,
   imgAlt,
   cardTitle,
+  projectPath,
   bgColor1,
   bgColor2,
   buttonBgColor,
@@ -18,7 +19,7 @@ const Card = ({
       swal("Oops!", "This project isn't published yet!", "warning");
     } else {
       // Replace with your navigation logic
-      window.location.href = `/project-view/${cardTitle}`
+      window.location.href = `/portfolio/${projectPath}`
     }
   }
   return cardType === "vertical" ? (

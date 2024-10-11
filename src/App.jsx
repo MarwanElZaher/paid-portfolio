@@ -8,6 +8,8 @@ import Navbar from './components/NavBar';
 import Portfolio from './pages/Portfolio';
 import Footer from './components/Footer';
 import ScrollToTop from './hooks/scrollToTop';
+import PBPMProject from './components/PBPMProject';
+import GeoSpatialProject from './components/GeoSpatialProject';
 
 
 const App = () => {
@@ -21,8 +23,8 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/contactme" element={<ContactMe />} />
-        <Route path="/portfolio/PBPM" element={<ContactMe />} />
-        <Route path="/portfolio/Geo%20Spatial" element={<ContactMe />} />
+        <Route path="/portfolio/pbpm" element={<PBPMProject />} />
+        <Route path="/portfolio/geo-spatial" element={<GeoSpatialProject />} />
       </Routes>
       <Footer />
     </Router>

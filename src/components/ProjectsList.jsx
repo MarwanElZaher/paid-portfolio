@@ -10,6 +10,7 @@ const ProjectList = ({ RecentProjects, numberOfCardsToBeRendered }) => {
                     imgSrc={project.imgSrc}
                     imgAlt={project.imgAlt}
                     cardTitle={project.cardTitle}
+                    projectPath={project.projectPath}
                     published={project.published}
                     bgColor1={project.firstBgColor}
                     bgColor2={project.secondBgColor}
