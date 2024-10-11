@@ -6,9 +6,13 @@ import NavItem from './NavItem';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();  // Get the current route
-  console.log(location, "co")
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -20,10 +24,9 @@ const Navbar = () => {
           </h1>
         </div>
 
-        {/* Hamburger Icon */}
+        {/* Hamburger Icon (visible only on mobile) */}
         <div className="block md:hidden">
           <button onClick={toggleMenu} className="focus:outline-none">
-            {/* Icon (could be SVG or FontAwesome) */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -37,12 +40,20 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Navigation Links */}
-        <ul className={`list-none flex flex-row gap-3 md:flex md:gap-5 ${isMenuOpen ? 'flex-col absolute top-16 left-0 bg-white shadow-md p-4 w-full z-50' : 'hidden'}`}>
-          <NavItem onClick={toggleMenu} to="/portfolio" isActive={location.pathname === '/portfolio'}>Portfolio</NavItem>
-          <NavItem onClick={toggleMenu} to="/about" isActive={location.pathname === '/about'}>About</NavItem>
-          <NavItem onClick={toggleMenu} to="/services" isActive={location.pathname === '/services'}>Services</NavItem>
-          <NavItem onClick={toggleMenu} to="/contactme" isActive={location.pathname === '/contactme'}>Contact Me</NavItem>
+        {/* Navigation Links (visible on larger screens, hidden on mobile) */}
+        <ul className={`hidden md:flex flex-row gap-3 md:gap-5`}>
+          <NavItem to="/portfolio" isActive={location.pathname === '/portfolio'}>Portfolio</NavItem>
+          <NavItem to="/about" isActive={location.pathname === '/about'}>About</NavItem>
+          <NavItem to="/services" isActive={location.pathname === '/services'}>Services</NavItem>
+          <NavItem to="/contactme" isActive={location.pathname === '/contactme'}>Contact Me</NavItem>
+        </ul>
+
+        {/* Mobile Menu (visible only on small screens) */}
+        <ul className={`list-none flex flex-col gap-3 absolute top-16 left-0 bg-white shadow-md p-4 w-full z-50 md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
+          <NavItem onClick={closeMenu} to="/portfolio" isActive={location.pathname === '/portfolio'}>Portfolio</NavItem>
+          <NavItem onClick={closeMenu} to="/about" isActive={location.pathname === '/about'}>About</NavItem>
+          <NavItem onClick={closeMenu} to="/services" isActive={location.pathname === '/services'}>Services</NavItem>
+          <NavItem onClick={closeMenu} to="/contactme" isActive={location.pathname === '/contactme'}>Contact Me</NavItem>
         </ul>
       </nav>
       <MarqueeBar />
