@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import MarqueeBar from './MarqueeBar';
 import NavItem from './NavItem';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const location = useLocation();  // Get the current route
+  console.log(location, "co")
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -38,10 +39,10 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <ul className={`list-none flex flex-row gap-3 md:flex md:gap-5 ${isMenuOpen ? 'flex-col absolute top-16 left-0 bg-white shadow-md p-4 w-full z-50' : 'hidden'}`}>
-          <NavItem to="/portfolio">Portfolio</NavItem>
-          <NavItem to="/about">About</NavItem>
-          <NavItem to="/services">Services</NavItem>
-          <NavItem to="/contactme">Contact Me</NavItem>
+          <NavItem onClick={toggleMenu} to="/portfolio" isActive={location.pathname === '/portfolio'}>Portfolio</NavItem>
+          <NavItem onClick={toggleMenu} to="/about" isActive={location.pathname === '/about'}>About</NavItem>
+          <NavItem onClick={toggleMenu} to="/services" isActive={location.pathname === '/services'}>Services</NavItem>
+          <NavItem onClick={toggleMenu} to="/contactme" isActive={location.pathname === '/contactme'}>Contact Me</NavItem>
         </ul>
       </nav>
       <MarqueeBar />
