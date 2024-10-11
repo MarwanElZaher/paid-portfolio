@@ -153,11 +153,11 @@ const About = () => {
           <div className="flex justify-center items-center">
             <p className="font-custom font-medium text-5xl md:text-6xl uppercase mb-12">{valuedClients}</p>
           </div>
-          <div className="flex flex-col border-y-2 p-10 border-[#E6E6E3] md:flex-row lg:flex-row justify-center gap-10">
+          <div className="flex flex-col border-y-2 p-10 border-[#E6E6E3] md:flex-row lg:flex-row justify-center gap-16">
             {/* Insert client logos here */}
-            <img src={AHR} alt="Client 1" className="h-16 mx-2" />
-            <img src={Group} alt="Client 2" className="h-16 mx-2" />
-            <img src={Pentab} alt="Client 3" className="h-16 mx-2" />
+            <img src={AHR} alt="Client 1" className="w-1/6 h-auto object-fit" />
+            <img src={Group} alt="Client 2" className="w-1/6 h-auto object-fit" />
+            <img src={Pentab} alt="Client 3" className="w-1/6 h-auto object-fit" />
           </div>
         </div>
       </section>
