@@ -1,9 +1,9 @@
 import React from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import { contactFormSectionTitle, contactMeDescription, ContactMeSecondSectionTitle, contactMeSlogan, contactMeTitle, contactMeWays } from '../constants';
-import hossamContactMe from '../assets/hossamContactMe.jpg';
-import contactMeBesideForm from '../assets/contactMeBesideForm.png';
-import DiamondIcon from '../assets/Vector.svg';
+import hossamContactMe from '../../assets/hossamContactMe.jpg';
+import contactMeBesideForm from '../../assets/contactMeBesideForm.png';
+import DiamondIcon from '../../assets/Vector.svg';
 import Card from '../components/Card';
 import ContactForm from '../components/ContactForm';
 

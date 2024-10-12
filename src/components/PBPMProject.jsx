@@ -1,7 +1,7 @@
 import React from "react";
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import { AboutProject, PBPMTitle, recentProjects } from "../constants";
-import MainPBMImage from "../assets/mainPBMImage.svg"
+import MainPBMImage from "../../assets/mainPBMImage.svg"
 import NavItem from "./NavItem";
 import ProjectList from "./ProjectsList";
 import CustomButton from "./CustomButton";

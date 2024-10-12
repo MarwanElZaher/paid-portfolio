@@ -1,7 +1,7 @@
 import React from "react";
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import { AboutProject, GEOSpatialTitle, recentProjects } from "../constants";
-import MainGeoSpatialImg from "../assets/geoSpatial.svg"
+import MainGeoSpatialImg from "../../assets/geoSpatial.svg"
 import NavItem from "./NavItem";
 import ProjectList from "./ProjectsList";
 import CustomButton from "./CustomButton";

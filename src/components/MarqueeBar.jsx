@@ -1,5 +1,5 @@
 import React from 'react';
-import Vector from '../assets/Vector.svg';
+import Vector from '../../assets/Vector.svg';
 
 const MarqueeBar = () => {
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import ServicesVideo from '../assets/serviceVideo.png';
-import ServiceImg from '../assets/serviceImg.jpg';
-import DiamondIcon from '../assets/Vector.svg';
-import HorizontalView from '../assets/horizontalView.mp4'
+import ServicesVideo from '../../assets/serviceVideo.png';
+import ServiceImg from '../../assets/serviceImg.jpg';
+import DiamondIcon from '../../assets/Vector.svg';
+import HorizontalView from '../../assets/horizontalView.mp4'
 import {
   providedServices,
   secondSectionTitle,

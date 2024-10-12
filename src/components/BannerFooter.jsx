@@ -1,8 +1,8 @@
 import React from "react";
 import { bannerFooterFirstText, bannerFooterSecondText } from "../constants";
 import NavItem from "./NavItem";
-import Vector from '../assets/Vector.svg';
-import footerBG from '../assets/footerBG.png';
+import Vector from '../../assets/Vector.svg';
+import footerBG from '../../assets/footerBG.png';
 
 const BannerFooter = () => {
     return (

@@ -1,11 +1,11 @@
 import React from 'react';
-import DiamondIcon from '../assets/Vector.svg';
+import DiamondIcon from '../../assets/Vector.svg';
 import { homePageSecondSectionSecondText, homePageSecondSectionText, providedServices, recentProjects, recentProjectsTitleFirstPart, recentProjectsTitleSecondPart, whatIcanDoTitle } from '../constants';
 import CustomButton from '../components/CustomButton';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import ProjectList from '../components/ProjectsList';
 import Card from '../components/Card';
-import HomeVideo from '../assets/homeVideo.mp4'
+import HomeVideo from '../../assets/homeVideo.mp4'
 const Home = () => {
   const { ref: videoRef, isVisible: videoVisible } = useIntersectionObserver({ threshold: 0.2 });
   const { ref: textRef, isVisible: textVisible } = useIntersectionObserver({ threshold: 0.2 });

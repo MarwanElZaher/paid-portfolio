@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import sentIcon from '../assets/sentIcon.svg';
+import sentIcon from '../../assets/sentIcon.svg';
 import { formTitle, mailMsgNotice, mailSentMsg, resendAMsg } from '../constants';
 
 const ContactForm = () => {

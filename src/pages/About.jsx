@@ -1,10 +1,10 @@
 import React from "react";
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import firstAboutImg from '../assets/firstAbout.jpg';
-import AHR from '../assets/AHR.svg';
-import Group from '../assets/Group.svg';
-import Pentab from '../assets/Pentab.svg';
-import VerticalView from "../assets/verticalViewAbout.mp4"
+import firstAboutImg from '../../assets/firstAbout.jpg';
+import AHR from '../../assets/AHR.svg';
+import Group from '../../assets/Group.svg';
+import Pentab from '../../assets/Pentab.svg';
+import VerticalView from "../../assets/verticalViewAbout.mp4"
 import {
   aboutDescription,
   aboutTitle,
@@ -22,9 +22,9 @@ import {
   statisticsTitle,
   valuedClients
 } from "../constants";
-import DiamondIcon from '../assets/Vector.svg';
+import DiamondIcon from '../../assets/Vector.svg';
 import Card from "../components/Card";
-import AboutVideoH from '../assets/AboutVideoH.mp4'
+import AboutVideoH from '../../assets/AboutVideoH.mp4'
 const About = () => {
   const { ref: videoRef, isVisible: videoVisible } = useIntersectionObserver({
     threshold: 0.2,
