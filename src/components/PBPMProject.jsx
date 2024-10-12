@@ -2,12 +2,16 @@ import React from "react";
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import { AboutProject, PBPMTitle, recentProjects } from "../constants";
 import MainPBMImage from "../assets/mainPBMImage.svg"
+import NavItem from "./NavItem";
+import ProjectList from "./ProjectsList";
+import CustomButton from "./CustomButton";
 const PBPMProject = () => {
 
     const { ref: videoRef, isVisible: videoVisible } = useIntersectionObserver({
         threshold: 0.2,
     });
-
+    const { ref: projectsRef, isVisible: recentProjectsVisible } = useIntersectionObserver({ threshold: 0.2 });
+    const otherProjects = recentProjects.filter((project) => project.projectPath !== "pbpm");
     const { technologies, Challenge, Approach, aboutTheProjectDetails, secondSection, projectObjectiveDetails, stakeholderFindings, technicalFindings, additionalNotes, interviewDetails, researchData, userResearchFindings, marketResearchFindings, userPersona, informationArchitecture, siteMapContent, visualDesignContent, methedologiesContent, lessonsLearned } = recentProjects.filter((project) => project.projectPath == "pbpm")[0];
     return (
         <main>
@@ -406,7 +410,38 @@ const PBPMProject = () => {
                     <p className="text-lg italic mb-4">{lessonsLearned.publicationStatus}</p>
                     <p>{lessonsLearned.content}</p>
                 </div>
+
+                <div className='flex items-center justify-center mt-4'>
+                    <NavItem
+                        to="/contactme"
+                        classname="bg-black text-white rounded-full p-2 transition duration-300 hover:bg-gray-500 hover:scale-x-105"
+                    >
+                        Let’s work together
+                    </NavItem>
+                </div>
             </section>
+
+
+            <section className="flex flex-col justify-center items-center min-h-screen">
+                <div className={`w-full gap-8 border-t border-b border-grey-800 flex flex-col items-center py-10 md:gap-8 md:py-15 lg:py-20 lg:gap-12 transition-all duration-1000 ${recentProjectsVisible ? 'scale-75 md:scale-80 lg:scale-95' : 'scale-70 md:scale-75 lg:scale-90'}`}>
+                    <div className='flex flex-col items-center'>
+                        <p className='uppercase font-custom font-medium text-3xl px-10 m-1 md:text-5xl lg:text-7xl'>You May </p>
+                        <p className='uppercase font-custom font-medium text-3xl px-10 m-1 md:text-5xl lg:text-7xl'>Also Like</p>
+                    </div>
+                    <div ref={projectsRef} className={`w-full flex flex-col justify-center items-center gap-10 transition-all duration-1000 ${recentProjectsVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+                        <ProjectList
+                            numberOfCardsToBeRendered={3}
+                            RecentProjects={otherProjects}
+                        />
+                        <CustomButton
+                            className='uppercase rounded-full bg-black text-white p-4 font-custom font-medium hover:bg-[#6e6e6b] hover:scale-110 transition-all duration-300'
+                            text="View More"
+                            to="/portfolio"
+                        />
+                    </div>
+                </div>
+            </section>
+
         </main >)
 }
 export default PBPMProject
