@@ -16,6 +16,9 @@ import Avatar from './assets/avatar.jpg'
 import OldFrame from './assets/firstFrame.svg'
 import NewFrame from './assets/secondFrame.svg'
 import ProjectProposal from './assets/projectProposal.svg'
+import GeoSpatialProposal from './assets/geoSpatialProposal.svg'
+import GeoOne from './assets/geoOne.svg'
+import GeoTwo from './assets/geoTwo.svg'
 
 export const homePageSecondSectionText = `I'm a dynamic UI/UX designer / Product Designer
  turning visionary concepts into seamless and impactful digital experiences.`
@@ -292,6 +295,26 @@ export const recentProjects = [
     secondBgColor: "bg-[#F9FFC2]",
     buttonBgColor: "border-2 border-[#12120F80]",
     published: true,
+    Challenge: "The primary challenge for the Geo Spatial landing page was to create an interface that was both simple and intuitive, ensuring accessibility for both tech and non-tech users. Additionally, it was crucial to visually convey the brand identity in a clear and engaging manner, all while maintaining a clean design that allows users to easily explore, analyze, and visualize geospatial data.",
+    Approach: "To address this challenge, I focused on simplifying the user experience by creating a minimal and intuitive layout. I ensured that the navigation was straightforward, with clear calls to action that guided users through the content. By incorporating subtle design elements and a consistent visual theme, I highlighted the brand identity without overwhelming the user. My goal was to create a seamless experience that communicated the platform's value while keeping the design clean and functional.", aboutTheProjectDetails: {
+      Timeline: "1 week",
+      Industry: "GIS",
+      Platform: "Landing Page",
+      MyRole: "Visual Designer"
+    },
+    secondSection: {
+      "Project Objective": ["The objective of the Geo Spatial landing page project is to develop a user-friendly and visually appealing interface that empowers both tech-savvy and non-tech users to seamlessly explore, analyze, and visualize geospatial data. The landing page aims to clearly communicate the brand identity and value proposition while providing intuitive navigation and accessibility to enhance user engagement and encourage interaction with the platform."], "Target Audience": [
+        { "Tech Professionals": "Data analysts, geospatial scientists, and software developers who require advanced tools for exploring and analyzing geospatial data." },
+        { "Non-Tech Users": "Business managers, decision-makers, and other professionals who may not have a technical background but need to access and understand geospatial insights for strategic decision-making." }
+      ],
+
+    },
+    visualDesignContent: {
+      VISUAL_DESIGN_HEADING: "Visual Design",
+      VISUAL_DESIGN_IMAGE: GeoSpatialProposal,
+      PROPOSAL_ONE: GeoOne,
+      PROPOSAL_TWO: GeoTwo,
+    }
   },
   {
     imgSrc: ThirdProjectImg,
@@ -365,3 +388,4 @@ export const resendAMsg = "new Message"
 //PBPM Project
 export const PBPMTitle = "PBPM"
 export const AboutProject = "About The Project"
+export const GEOSpatialTitle = "Geo spatial"
