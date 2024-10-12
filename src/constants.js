@@ -12,6 +12,11 @@ import TargetIcon from './assets/target.svg'
 import MoreInfo from './assets/info.svg'
 import Brush from './assets/brush.svg'
 import bulb from './assets/bulb.svg'
+import Avatar from './assets/avatar.jpg'
+import OldFrame from './assets/firstFrame.svg'
+import NewFrame from './assets/secondFrame.svg'
+import ProjectProposal from './assets/projectProposal.svg'
+
 export const homePageSecondSectionText = `I'm a dynamic UI/UX designer / Product Designer
  turning visionary concepts into seamless and impactful digital experiences.`
 export const homePageSecondSectionSecondText = `I am committed to delivering cutting-edge solutions that redefine the digital landscape.`
@@ -154,7 +159,128 @@ export const recentProjects = [
         { question: "Who is the user?" },
         { question: "Next Action" },
       ],
-    }
+    },
+    researchData: {
+      userResearchHeading: "User research",
+      userResearchDescription:
+        "User research is crucial for understanding the needs, preferences, and pain points of PBPM platform.",
+      researchGoalsHeading: "Research goals",
+      researchGoals: [
+        "Understand the current user experience and identify areas for improvement.",
+        "Gather insights on user needs, expectations, and pain points.",
+        "Identify opportunities for new features or enhancements.",
+        "Evaluate user satisfaction and loyalty.",
+      ],
+      researchMethodsHeading: "Research methods",
+      researchMethods: ["User interviews", "Usability testing"],
+      researchQuestionsHeading: "Research questions",
+      researchQuestions: [
+        "Initial market research",
+        "How do users currently navigate on the platform?",
+        "What are the pain points or frustrations users experience during building a form?",
+        "What features or functionalities are users most satisfied with?",
+        "What areas need improvement?",
+      ],
+    },
+    userResearchFindings: {
+      navigationProblems: {
+        heading: "Navigation Problems",
+        points: [
+          "Complex and non-intuitive navigation flow: Users find it difficult to locate key features and complete tasks efficiently.",
+          "Unclear menu structure: Menus are poorly organized, leading to confusion when trying to access different sections of the platform.",
+          "Lack of visual hierarchy: Important navigation elements are not easily distinguishable...",
+          "No clear breadcrumbs or path indicators...",
+          "Overloaded navigation options: Too many options are presented at once...",
+        ],
+      },
+      formBuildingProblems: {
+        heading: "Form Building Problems",
+        points: [
+          "Complicated form creation process: The steps required to build a new form are not streamlined, leading to frustration for users.",
+          "Excessive validations: Users face frequent interruptions due to complex validation requirements...",
+          "Unclear field labels and guidance: Users are unsure about the purpose of certain fields and inputs...",
+          "Lack of reusable templates: Users have to recreate forms from scratch...",
+          "Limited drag-and-drop functionality: The absence of a drag-and-drop feature makes it harder to organize form elements intuitively.",
+        ],
+      },
+    },
+    userPersona: {
+      intro: "Based on the interviews I conducted, I was able to identify the pain points, goals, concerns, and success factors of the primary and secondary personas.",
+      primaryPersona: {
+        name: "Ashraf Mohamed",
+        role: "IT Systems Administrator",
+        location: "Cairo, Egypt",
+        avatar: Avatar,
+        details: "40 y.o., Senior IT Systems Administrator",
+        needsAndPains: [
+          "Efficient System Integration: Alex seeks workflow management platforms that seamlessly integrate with existing IT infrastructure, minimizing disruption and compatibility issues.",
+          "Scalability and Performance: Alex requires workflow solutions capable of handling growing data volumes and processing demands without compromising performance.",
+          "Robust Security Features: Alex looks for workflow management platforms with robust encryption, access controls, and compliance features to safeguard sensitive data.",
+          "Customization and Automation: Alex values platforms that offer extensive customization options and workflow automation capabilities, allowing him to tailor processes to specific organizational needs and reduce manual intervention.",
+          "Reliable Support and Documentation: Alex relies on comprehensive documentation and responsive customer support from the platform provider to troubleshoot issues and optimize system performance.",
+        ],
+      },
+    },
+    marketResearchFindings: {
+      heading: "Market Research Findings",
+      description: "It is necessary to do a competitor analysis as it is a strategic evaluation to identify the competitors' strengths, weaknesses, and opportunities with a focus on evaluating the user experience offered by the competitors' platforms and applications, Identifying UX best practices, Discovering areas for improvement, Informing feature prioritization, and Supporting decision-making.",
+      keyPoints: [
+        "Understand the current user experience and identify areas for improvement.",
+        "Gather insights on user needs, expectations, and pain points.",
+        "Identify opportunities for new features or enhancements.",
+        "Evaluate user satisfaction and loyalty.",
+      ],
+    },
+    informationArchitecture: {
+      heading: "Information Architecture",
+      description:
+        "In the case of PBPM, the platform lacked a structured Information Architecture (IA) despite its vast complexity and numerous flows. Stakeholder insights revealed that both the content and its context were confusing and not user-friendly. By prioritizing the creation of an IA for the existing platform and adopting an iterative approach, we were able to address three core problems: improving the user experience, organizing content more effectively, and clarifying the context. This process was crucial in streamlining navigation and enhancing the overall usability of the platform.",
+      focus: "In the Information Architecture phase, I focused on improving findability and discoverability by organizing content logically and aligning with users' mental models. I applied principles like Hick’s Law, Jakob’s Law, and proximity to simplify navigation, while introducing autocomplete and corrections to reduce cognitive load. A thorough content auditensured relevant information was prioritized through a clear visual hierarchy, making important content easily accessible and intuitive to find.",
+    },
+    siteMapContent: {
+      SITEMAP_HEADING: "Sitemap",
+      OLD_STRUCTURE_HEADING: "Old Structure",
+      OLD_STRUCTURE_DESCRIPTION:
+        "The problem with the old structure was that users struggled to navigate efficiently, often unable to go back easily. It required too many steps, making the process frustrating and time-consuming. This lack of smooth navigation significantly impacted the overall user experience, contributing to confusion and inefficiency.",
+      OLD_STRUCTURE_IMAGE: OldFrame,
+
+      NEW_STRUCTURE_HEADING: "New Structure",
+      NEW_STRUCTURE_DESCRIPTION:
+        "The problem with the old structure was that users struggled to navigate efficiently, often unable to go back easily. It required too many steps, making the process frustrating and time-consuming. This lack of smooth navigation significantly impacted the overall user experience, contributing to confusion and inefficiency.",
+      NEW_STRUCTURE_IMAGE: NewFrame,
+    },
+    visualDesignContent: {
+      VISUAL_DESIGN_HEADING: "Visual Design",
+      VISUAL_DESIGN_DESCRIPTION:
+        "Here is a sample of the screens, with the total count exceeding 120.",
+      VISUAL_DESIGN_IMAGE: ProjectProposal,
+    },
+    methedologiesContent: {
+      TESTING_METRICS_HEADING: "Testing and Metrics",
+      TESTING_METRICS_DESCRIPTION:
+        "Throughout the process, I implemented various testing methodologies, including A/B testing and user testing. These approaches helped validate design decisions and gather user feedback. Beyond these, usability testing and heuristic evaluations were particularly valuable for this project, allowing us to identify pain points, improve navigation, and refine the overall user experience. These tests ensured the design aligned with user needs and business goals effectively.",
+
+      METHODOLOGIES_HEADING: "Methodologies",
+      METHODOLOGIES_LIST: [
+        "A/B Testing: Compared different design variations to optimize user experience.",
+        "User Testing: Gathered direct feedback from end users to identify usability issues.",
+        "Usability Testing: Focused on real-time user interactions to uncover pain points and improve navigation.",
+        "Heuristic Evaluation: Used expert reviews to identify usability flaws and areas for improvement.",
+      ],
+
+      KEY_OUTCOMES_HEADING: "Key Outcomes",
+      KEY_OUTCOMES_LIST: [
+        "Increased navigation efficiency by 3x after usability testing.",
+        "Improved task completion rate, leading to smoother user workflows.",
+        "The new product design accelerated sales, allowing faster product adoption.",
+        "Internally, the redesign simplified the process of creating forms and templates, boosting productivity.",
+      ],
+    },
+    lessonsLearned: {
+      title: "Design System",
+      publicationStatus: "Soon will be published",
+      content: `In my PBPM project, I faced significant challenges ensuring that my designs met both user needs and business objectives while being effectively sold to new customers. Due to top management's directive to move on to the next phase prematurely, my designs were not implemented as intended, highlighting the need for better communication with developers. To resolve this, I prioritized open dialogue and proposed a new communication framework to the CEO, which improved task management and allowed us to measure the impact of our designs on key performance indicators. This initiative led to a remarkable improvement in our communication processes, enabling developers to complete their work twice as fast. Ultimately, these efforts contributed to a successful product launch, underscoring the importance of collaboration and effective design implementation.`
+    },
   },
   {
     imgSrc: SecondProjectImg,

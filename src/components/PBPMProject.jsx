@@ -8,7 +8,7 @@ const PBPMProject = () => {
         threshold: 0.2,
     });
 
-    const { technologies, Challenge, Approach, aboutTheProjectDetails, secondSection, projectObjectiveDetails, stakeholderFindings, technicalFindings, additionalNotes, interviewDetails } = recentProjects.filter((project) => project.projectPath == "pbpm")[0];
+    const { technologies, Challenge, Approach, aboutTheProjectDetails, secondSection, projectObjectiveDetails, stakeholderFindings, technicalFindings, additionalNotes, interviewDetails, researchData, userResearchFindings, marketResearchFindings, userPersona, informationArchitecture, siteMapContent, visualDesignContent, methedologiesContent, lessonsLearned } = recentProjects.filter((project) => project.projectPath == "pbpm")[0];
     return (
         <main>
             <section className="w-full h-auto overflow-hidden my-10">
@@ -198,7 +198,215 @@ const PBPMProject = () => {
                     </div>
                 </div>
 
+                <div className="research-container bg-gray-50 text-gray-800">
+                    <h1 className="font-medium text-2xl mt-6 mb-2">
+                        {researchData.userResearchHeading}
+                    </h1>
+                    <p className="text-lg mb-6">{researchData.userResearchDescription}</p>
+                    <div className="flex flex-row justify-around gap-6 my-4">
+                        <div className="flex flex-col w-1/3">
+                            <div className="bg-[#EFEFEC] rounded-3xl p-6 ">
+                                <h2 className="text-xl font-semibold mb-3">
+                                    {researchData.researchGoalsHeading}
+                                </h2>
+                                <ul className="list-disc list-inside mb-6">
+                                    {researchData.researchGoals.map((goal, index) => (
+                                        <li key={index} className="mb-2 text-lg">
+                                            {goal}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="flex flex-col w-1/3">
+                            <div className="bg-[#EFEFEC] rounded-3xl p-6 ">
+                                <h2 className="text-xl font-semibold mb-3">
+                                    {researchData.researchMethodsHeading}
+                                </h2>
+                                <ul className="list-disc list-inside mb-6">
+                                    {researchData.researchMethods.map((method, index) => (
+                                        <li key={index} className="mb-2 text-lg">
+                                            {method}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="flex flex-col w-1/3">
+                            <div className="bg-[#EFEFEC] rounded-3xl p-6 ">
+
+                                <h2 className="text-xl font-semibold mb-3">
+                                    {researchData.researchQuestionsHeading}
+                                </h2>
+                                <ul className="list-disc list-inside">
+                                    {researchData.researchQuestions.map((question, index) => (
+                                        <li key={index} className="mb-2 text-lg">
+                                            {question}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <h4 className="font-medium text-2xl mt-5 mb-5">Findings </h4>
+
+
+
+                <div className="mb-6">
+                    <h2 className="text-[#2D9CDB] font-medium text-lg mt-5">
+                        {userResearchFindings.navigationProblems.heading}
+                    </h2>
+                    <ul className="list-disc list-inside">
+                        {userResearchFindings.navigationProblems.points.map((point, index) => (
+                            <li key={index} className="mb-2 font-medium text-lg">
+                                {point}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 className="text-[#2D9CDB] font-medium text-lg mt-5">
+                        {userResearchFindings.formBuildingProblems.heading}
+                    </h2>
+                    <ul className="list-disc list-inside">
+                        {userResearchFindings.formBuildingProblems.points.map((point, index) => (
+                            <li key={index} className="mb-2 font-medium text-lg">
+                                {point}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </section>
-        </main>)
+            <section className="p-10">
+                <div >
+                    <div className="flex flex-col">
+                        <h2 className="font-medium text-2xl mt-5 mb-5">User Persona</h2>
+                        <p className="mb-4 text-lg text-gray-700">{userPersona.intro}</p>
+                    </div>
+                    <div className="bg-[#EFEFEC] p-6 rounded-3xl flex flex-col">
+                        <h2 className="font-medium text-2xl mb-5">
+                            Primary Persona
+                        </h2>
+                        <div className="flex flex-row justify-center p-6">
+                            <div className="w-4/5">
+                                <div className="mb-6">
+
+                                    <div className="flex items-center mb-4">
+                                        <img src={userPersona.primaryPersona.avatar} alt="Ashraf Mohamed" className="w-2/12 h-auto rounded-full mr-4" />
+                                        <div className="p-6 flex flex-col gap-2">
+                                            <h3 className="text-4xl font-semibold">{userPersona.primaryPersona.name}</h3>
+                                            <p className="text-2xl font-normal">{userPersona.primaryPersona.role} - {userPersona.primaryPersona.location}</p>
+                                            <p>{userPersona.primaryPersona.details}</p>
+                                        </div>
+                                    </div>
+                                    <h2 className="font-medium text-2xl mt-5 mb-2">
+                                        Needs & Pains
+                                    </h2>
+                                    <ol className="ml-4 list-decimal">
+                                        {userPersona.primaryPersona.needsAndPains.map((pain, index) => (
+                                            <li key={index} className="mb-2 text-lg text-gray-700">{pain}</li>
+                                        ))}
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Market Research Findings */}
+                <div>
+                    <h3 className="font-medium text-3xl mt-5 mb-5">{marketResearchFindings.heading}</h3>
+                    <p className="mb-4 text-lg text-gray-700">{marketResearchFindings.description}</p>
+                    <div className="bg-[#EFEFEC] p-6 rounded-3xl">
+                        <h2 className="font-medium text-2xl mt-5 mb-2">
+                            Key points from competitors
+                        </h2>
+                        <ul className="list-disc list-inside">
+                            {marketResearchFindings.keyPoints.map((point, index) => (
+                                <li key={index} className="mb-2 text-lg text-gray-700">{point}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section className="p-10">
+                <div className="mb-6">
+                    <h3 className="text-3xl font-medium">{informationArchitecture.heading}</h3>
+                    <p className="mt-5">{informationArchitecture.description}</p>
+                    <p className="mt-5">{informationArchitecture.focus}</p>
+                </div>
+                <div className="p-6 bg-[#EFEFEC] shadow-lg rounded-lg">
+                    <h2 className="text-2xl font-bold mb-4">{siteMapContent.SITEMAP_HEADING}</h2>
+
+                    <div className="mb-8">
+                        <h3 className="text-xl font-semibold mb-2  text-[#2D9CDB]">{siteMapContent.OLD_STRUCTURE_HEADING}</h3>
+                        <p className="mb-4">{siteMapContent.OLD_STRUCTURE_DESCRIPTION}</p>
+                        <img
+                            src={siteMapContent.OLD_STRUCTURE_IMAGE}
+                            alt="Old Structure Sitemap"
+                            className="w-full h-auto rounded-md"
+                        />
+                    </div>
+
+                    <div>
+                        <h3 className="text-xl font-semibold mb-2  text-[#2D9CDB]">{siteMapContent.NEW_STRUCTURE_HEADING}</h3>
+                        <p className="mb-4">{siteMapContent.NEW_STRUCTURE_DESCRIPTION}</p>
+                        <img
+                            src={siteMapContent.NEW_STRUCTURE_IMAGE}
+                            alt="New Structure Sitemap"
+                            className="w-full h-auto rounded-md"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="p-10">
+                    <h2 className="text-2xl font-bold mb-4">{visualDesignContent.VISUAL_DESIGN_HEADING}</h2>
+                    <p className="mb-4">{visualDesignContent.VISUAL_DESIGN_DESCRIPTION}</p>
+
+                </div>
+                <img
+                    src={visualDesignContent.VISUAL_DESIGN_IMAGE}
+                    alt="Visual Design Sample Screens"
+                    className="w-full h-auto rounded-md"
+                />
+
+            </section>
+
+            <section className="p-10">
+                <h2 className="text-2xl font-bold mt-6 mb-4">{methedologiesContent.TESTING_METRICS_HEADING}</h2>
+                <p className="mb-4">{methedologiesContent.TESTING_METRICS_DESCRIPTION}</p>
+                <div className="flex flex-row justify-between gap-6">
+                    <div className="flex flex-col bg-[#EFEFEC] p-4 rounded-3xl">
+                        <h3 className="text-xl font-semibold mb-2">{methedologiesContent.METHODOLOGIES_HEADING}</h3>
+                        <p className="mb-2">Conducted a variety of testing methodologies, including:</p>
+                        <ul className="list-disc list-inside mb-4 ml-5">
+                            {methedologiesContent.METHODOLOGIES_LIST.map((methodology, index) => (
+                                <li key={index} className="mb-1">{methodology}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="flex flex-col bg-[#EFEFEC] p-4 rounded-3xl">
+
+                        <h3 className="text-xl font-semibold mb-2">{methedologiesContent.KEY_OUTCOMES_HEADING}</h3>
+
+                        <ul className="list-disc list-inside">
+                            {methedologiesContent.KEY_OUTCOMES_LIST.map((outcome, index) => (
+                                <li key={index} className="mb-1">{outcome}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+                <div className="my-10">
+                    <h2 className="text-2xl font-bold mb-4">{lessonsLearned.title}</h2>
+                    <p className="text-lg italic mb-4">{lessonsLearned.publicationStatus}</p>
+                    <p>{lessonsLearned.content}</p>
+                </div>
+            </section>
+        </main >)
 }
 export default PBPMProject
