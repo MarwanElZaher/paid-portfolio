@@ -59,6 +59,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row w-full mt-8">
           <img
             src={firstAboutImg}
+            loading="lazy"
             alt="Hossam IMG"
             className="rounded-3xl w-full md:w-2/3 object-cover"
           />
@@ -66,11 +67,6 @@ const About = () => {
 
             <source src={VerticalView} type="video/mp4" />
           </video>
-          {/* <img
-            src={secondAboutImg}
-            alt="Hossam small IMG"
-            className="rounded-3xl w-full md:w-1/3 object-cover"
-          /> */}
         </div>
       </section>
 
@@ -155,9 +151,9 @@ const About = () => {
           </div>
           <div className="flex flex-col border-y-2 p-10 border-[#E6E6E3] md:flex-row lg:flex-row justify-center gap-16">
             {/* Insert client logos here */}
-            <img src={AHR} alt="Client 1" className="w-1/6 h-auto object-fit" />
-            <img src={Group} alt="Client 2" className="w-1/6 h-auto object-fit" />
-            <img src={Pentab} alt="Client 3" className="w-1/6 h-auto object-fit" />
+            <img src={AHR} loading="lazy" alt="Client 1" className="w-1/6 h-auto object-fit" />
+            <img src={Group} loading="lazy" alt="Client 2" className="w-1/6 h-auto object-fit" />
+            <img src={Pentab} loading="lazy" alt="Client 3" className="w-1/6 h-auto object-fit" />
           </div>
         </div>
       </section>

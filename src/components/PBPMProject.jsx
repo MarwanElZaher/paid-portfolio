@@ -53,6 +53,7 @@ const PBPMProject = () => {
                 <div className="flex justify-center w-full mt-8 bg-[#0896D4] pt-10 rounded-3xl">
                     <img
                         src={MainPBMImage}
+                        loading="lazy"
                         alt="MainPBMImage"
                         className="w-4/5 object-cover h-auto"
                     />
@@ -132,7 +133,7 @@ const PBPMProject = () => {
                         <div key={index} className="flex flex-col w-1/5">
                             <div className="flex flex-row justify-arround gap-2 items-center">
                                 <div className="bg-[#2D9CDB] p-1 flex justify-center items-center rounded-lg">
-                                    <img src={objective.icon} alt={objective.iconTitle} />
+                                    <img src={objective.icon} loading="lazy" alt={objective.iconTitle} />
                                 </div>
                                 <p className="font-bold">{objective.iconTitle}</p>
                             </div>
@@ -299,7 +300,7 @@ const PBPMProject = () => {
                                 <div className="mb-6">
 
                                     <div className="flex items-center mb-4">
-                                        <img src={userPersona.primaryPersona.avatar} alt="Ashraf Mohamed" className="w-2/12 h-auto rounded-full mr-4" />
+                                        <img src={userPersona.primaryPersona.avatar} loading="lazy" alt="Ashraf Mohamed" className="w-2/12 h-auto rounded-full mr-4" />
                                         <div className="p-6 flex flex-col gap-2">
                                             <h3 className="text-4xl font-semibold">{userPersona.primaryPersona.name}</h3>
                                             <p className="text-2xl font-normal">{userPersona.primaryPersona.role} - {userPersona.primaryPersona.location}</p>
@@ -351,6 +352,7 @@ const PBPMProject = () => {
                         <p className="mb-4">{siteMapContent.OLD_STRUCTURE_DESCRIPTION}</p>
                         <img
                             src={siteMapContent.OLD_STRUCTURE_IMAGE}
+                            loading="lazy"
                             alt="Old Structure Sitemap"
                             className="w-full h-auto rounded-md"
                         />
@@ -361,6 +363,7 @@ const PBPMProject = () => {
                         <p className="mb-4">{siteMapContent.NEW_STRUCTURE_DESCRIPTION}</p>
                         <img
                             src={siteMapContent.NEW_STRUCTURE_IMAGE}
+                            loading="lazy"
                             alt="New Structure Sitemap"
                             className="w-full h-auto rounded-md"
                         />
@@ -375,6 +378,7 @@ const PBPMProject = () => {
                 </div>
                 <img
                     src={visualDesignContent.VISUAL_DESIGN_IMAGE}
+                    loading="lazy"
                     alt="Visual Design Sample Screens"
                     className="w-full h-auto rounded-md"
                 />

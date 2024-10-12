@@ -34,9 +34,9 @@ const Home = () => {
 
       <section className="flex flex-col justify-center items-center min-h-screen">
         <div className={`flex flex-col items-center text-center gap-4 max-w-6xl md:gap-6 lg:gap-8 transition-all duration-1000 ${textVisible ? 'scale-95' : 'scale-75'}`}>
-          <img src={DiamondIcon} alt='diamondIcon' className="w-8 lg:w-16" />
+          <img src={DiamondIcon} loading="lazy" alt='diamondIcon' className="w-8 lg:w-16" />
           <h1 ref={textRef} className='uppercase font-custom font-medium text-3xl md:text-5xl lg:text-7xl lg:px-10 lg:mx-10'>{homePageSecondSectionText}</h1>
-          <img src={DiamondIcon} alt='diamondIcon' className="w-8 lg:w-16" />
+          <img src={DiamondIcon} loading="lazy" alt='diamondIcon' className="w-8 lg:w-16" />
           <h2 className=' mx-10 font-normal text-xl md:mx-20 md:text-2xl lg:mx-52 lg:text-3xl '>{homePageSecondSectionSecondText}</h2>
           <CustomButton
             className='uppercase rounded-full bg-black text-white p-4 font-custom font-medium hover:bg-[#6e6e6b] hover:scale-110 transition-all duration-300'

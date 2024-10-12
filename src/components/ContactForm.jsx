@@ -60,7 +60,7 @@ const ContactForm = () => {
     <>
       {msgSent ? (
         <div className='flex flex-col justify-center items-center mx-5 md:mx-10 transition-all animate-scaleIn duration-600'>
-          <img className="w-12 h-12 mb-10" src={sentIcon} alt='sent-icon' />
+          <img className="w-12 h-12 mb-10" src={sentIcon} loading="lazy" alt='sent-icon' />
           <h2 className='text-center text-white font-custom font-medium text-4xl mb-5'>{mailSentMsg}</h2>
           <p className='text-white text-center font-custom font-normal text-lg mx-5 md:mx-20 mb-10'>{mailMsgNotice}</p>
           <button onClick={handleSendingNewMsg} className="block font-custom font-medium rounded-full uppercase transition-all duration-250 ease-in-out bg-white text-black py-3 px-6 duration-300 hover:bg-gray-300">{resendAMsg}</button>

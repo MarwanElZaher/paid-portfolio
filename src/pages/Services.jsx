@@ -55,6 +55,7 @@ const Services = () => {
           </video>
           <img
             src={ServicesVideo}
+            loading="lazy"
             alt="Service Video"
             className="w-full object-cover h-64 md:h-auto"
           />
@@ -108,6 +109,7 @@ const Services = () => {
           </div>
           <img
             src={ServiceImg}
+            loading="lazy"
             alt='Hossam'
             className="w-full md:w-1/3 lg:w-1/3 h-auto rounded-3xl"
           />

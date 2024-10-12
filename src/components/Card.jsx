@@ -28,7 +28,7 @@ const Card = ({
       className={`flex flex-col rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:rounded-2xl cursor-pointer`}>
       {/* Image section with the first background color */}
       <div className={`${bgColor1} flex justify-center h-3/4 px-8 py-12 md:p-16 lg:py-20 lg:px-10`}>
-        {imgSrc && <img src={imgSrc} alt={imgAlt} className="w-full h-auto rounded-lg" />}
+        {imgSrc && <img src={imgSrc} alt={imgAlt} loading="lazy" className="w-full h-auto rounded-lg" />}
       </div>
 
       {/* Content section with the second background color */}
@@ -62,7 +62,7 @@ const Card = ({
       onClick={onClick}
       className={`flex flex-col justify-around rounded-2xl overflow-hidden p-6 m-4 border-2 gap-3 border-[#E6E6E3] ${bgColor1} cursor-pointer transition-all duration-500 scale-95 hover:scale-105 hover:shadow-gray-300 shadow-md hover:border-gray-500`}>
       <div className="flex justify-center items-start">
-        <img className="w-1/3 md:w-1/3 lg:w-1/2 h-auto" src={imgSrc} alt={imgAlt} />
+        <img className="w-1/3 md:w-1/3 lg:w-1/2 h-auto" src={imgSrc} loading="lazy" alt={imgAlt} />
       </div>
       <h3 className="flex flex-col items-center text-2xl md:text-3xl font-custom font-medium">{cardTitle}</h3>
       <p className="flex flex-col items-center text-gray-500 text-sm md:text-base md:mx-20 text-center">{description}</p>
@@ -74,7 +74,7 @@ const Card = ({
         <p className="text-gray-500 text-sm md:text-base">{description}</p>
       </div>
       <div className="flex justify-start items-start lg:justify-start">
-        <img className="w-1/2 md:w-full lg:w-full h-auto" src={imgSrc} alt={imgAlt} />
+        <img className="w-1/2 md:w-full lg:w-full h-auto" src={imgSrc} loading="lazy" alt={imgAlt} />
       </div>
     </div>
   );

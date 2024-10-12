@@ -54,6 +54,7 @@ const GeoSpatialProject = () => {
                 <div className="flex justify-center w-full mt-8 bg-[#DDEA64] pt-10 rounded-3xl">
                     <img
                         src={MainGeoSpatialImg}
+                        loading="lazy"
                         alt="MainPBMImage"
                         className="w-4/5 object-cover h-auto"
                     />
@@ -139,16 +140,19 @@ const GeoSpatialProject = () => {
                 </div>
                 <img
                     src={visualDesignContent.VISUAL_DESIGN_IMAGE}
+                    loading="lazy"
                     alt="Visual Design Sample Screens"
                     className="w-full h-auto rounded-md my-10"
                 />
                 <img
                     src={visualDesignContent.PROPOSAL_ONE}
+                    loading="lazy"
                     alt="Colors Sample Screens"
                     className="w-full h-auto rounded-md my-10"
                 />
                 <img
                     src={visualDesignContent.PROPOSAL_TWO}
+                    loading="lazy"
                     alt="Proto-type Sample Screens"
                     className="w-full h-auto rounded-md my-10"
                 />

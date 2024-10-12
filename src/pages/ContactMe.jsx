@@ -29,7 +29,7 @@ const ContactMe = () => {
         </div>
 
         <div className="flex flex-col w-full mt-8">
-          <img src={hossamContactMe} alt="Hossam IMG" className="w-full object-cover rounded-3xl" />
+          <img src={hossamContactMe} loading="lazy" alt="Hossam IMG" className="w-full object-cover rounded-3xl" />
         </div>
       </section>
 
@@ -65,7 +65,7 @@ const ContactMe = () => {
           <div className='p-5 md:p-10 bg-black rounded-3xl flex flex-col justify-center'>
             <ContactForm />
           </div>
-          <img className='w-full lg:w-2/3 rounded-3xl' src={contactMeBesideForm} alt='cubes-img' />
+          <img className='w-full lg:w-2/3 rounded-3xl' src={contactMeBesideForm} loading="lazy" alt='cubes-img' />
         </div>
       </section>
 
