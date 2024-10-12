@@ -53,12 +53,7 @@ const Services = () => {
 
             <source src={HorizontalView} type="video/mp4" />
           </video>
-          <img
-            src={ServicesVideo}
-            loading="lazy"
-            alt="Service Video"
-            className="w-full object-cover h-64 md:h-auto"
-          />
+
         </div>
       </section>
 
