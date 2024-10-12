@@ -63,7 +63,7 @@ const About = () => {
             alt="Hossam IMG"
             className="rounded-3xl w-full md:w-2/3 object-cover"
           />
-          <video className='rounded-3xl w-full md:w-1/3 object-cover' autoPlay muted controls={false} loop playsInline>
+          <video loading="lazy" className='rounded-3xl w-full md:w-1/3 object-cover' autoPlay muted controls={false} loop playsInline>
 
             <source src={VerticalView} type="video/mp4" />
           </video>
@@ -140,7 +140,7 @@ const About = () => {
         </div>
       </section>
 
-      <video className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline >
+      <video loading="lazy" className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline >
         <source src={AboutVideoH} type="video/mp4" />
       </video>
 

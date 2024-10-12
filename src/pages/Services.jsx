@@ -49,7 +49,7 @@ const Services = () => {
 
         {/* Images below the content */}
         <div className="flex flex-row w-full mt-8">
-          <video className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline>
+          <video loading="lazy" className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline>
 
             <source src={HorizontalView} type="video/mp4" />
           </video>

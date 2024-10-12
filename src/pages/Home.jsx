@@ -24,7 +24,7 @@ const Home = () => {
                 Hossam Saieed
               </h1>
             </div>
-            <video className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline>
+            <video loading="lazy" className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline>
 
               <source src={HomeVideo} type="video/mp4" />
             </video>
