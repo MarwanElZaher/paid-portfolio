@@ -9,7 +9,6 @@ const VideoPlayer = ({ url, parentClassName, childClassName }) => {
                 allow="autoplay; fullscreen;"
                 allowFullScreen
                 muted
-                loading="lazy"
                 title="Vimeo Video"
             ></iframe>
         </div>
