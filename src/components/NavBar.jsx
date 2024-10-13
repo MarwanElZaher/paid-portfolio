@@ -42,18 +42,18 @@ const Navbar = () => {
 
         {/* Navigation Links (visible on larger screens, hidden on mobile) */}
         <ul className={`hidden md:flex flex-row gap-3 md:gap-5`}>
-          <NavItem to="/portfolio" isActive={location.pathname === '/portfolio'}>Portfolio</NavItem>
-          <NavItem to="/about" isActive={location.pathname === '/about'}>About</NavItem>
-          <NavItem to="/services" isActive={location.pathname === '/services'}>Services</NavItem>
-          <NavItem to="/contactme" isActive={location.pathname === '/contactme'}>Contact Me</NavItem>
+          <NavItem to="/paid-portfolio/portfolio" isActive={location.pathname === '/paid-portfolio/portfolio'}>Portfolio</NavItem>
+          <NavItem to="/paid-portfolio/about" isActive={location.pathname === '/paid-portfolio/about'}>About</NavItem>
+          <NavItem to="/paid-portfolio/services" isActive={location.pathname === '/paid-portfolio/services'}>Services</NavItem>
+          <NavItem to="/paid-portfolio/contactme" isActive={location.pathname === '/paid-portfolio/contactme'}>Contact Me</NavItem>
         </ul>
 
         {/* Mobile Menu (visible only on small screens) */}
         <ul className={`list-none flex flex-col gap-3 absolute top-16 left-0 bg-white shadow-md p-4 w-full z-50 md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <NavItem onClick={closeMenu} to="/portfolio" isActive={location.pathname === '/portfolio'}>Portfolio</NavItem>
-          <NavItem onClick={closeMenu} to="/about" isActive={location.pathname === '/about'}>About</NavItem>
-          <NavItem onClick={closeMenu} to="/services" isActive={location.pathname === '/services'}>Services</NavItem>
-          <NavItem onClick={closeMenu} to="/contactme" isActive={location.pathname === '/contactme'}>Contact Me</NavItem>
+          <NavItem onClick={closeMenu} to="/paid-portfolio/portfolio" isActive={location.pathname === '/paid-portfolio/portfolio'}>Portfolio</NavItem>
+          <NavItem onClick={closeMenu} to="/paid-portfolio/about" isActive={location.pathname === '/paid-portfolio/about'}>About</NavItem>
+          <NavItem onClick={closeMenu} to="/paid-portfolio/services" isActive={location.pathname === '/paid-portfolio/services'}>Services</NavItem>
+          <NavItem onClick={closeMenu} to="/paid-portfolio/contactme" isActive={location.pathname === '/paid-portfolio/contactme'}>Contact Me</NavItem>
         </ul>
       </nav>
       <MarqueeBar />

@@ -19,12 +19,12 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/paid-portfolio" element={<Home />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contactme" element={<ContactMe />} />
-        <Route path="/portfolio/pbpm" element={<PBPMProject />} />
-        <Route path="/portfolio/geo-spatial" element={<GeoSpatialProject />} />
+        <Route path="/paid-portfolio/portfolio" element={<Portfolio />} />
+        <Route path="/paid-portfolio/services" element={<Services />} />
+        <Route path="/paid-portfolio/about" element={<About />} />
+        <Route path="/paid-portfolio/contactme" element={<ContactMe />} />
+        <Route path="/paid-portfolio/portfolio/pbpm" element={<PBPMProject />} />
+        <Route path="/paid-portfolio/portfolio/geo-spatial" element={<GeoSpatialProject />} />
       </Routes>
       <Footer />
     </Router>

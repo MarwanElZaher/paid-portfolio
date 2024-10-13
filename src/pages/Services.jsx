@@ -88,7 +88,7 @@ const Services = () => {
               <p className='font-normal text-base md:text-lg'>{thirdSectionSecondParagraph}</p>
               <div className='flex items-start justify-start mt-4'>
                 <NavItem
-                  to="/contactme"
+                  to="/paid-portfolio/contactme"
                   className="bg-black text-white rounded-full p-4 md:p-6 transition duration-300 hover:bg-gray-500 hover:scale-x-105"
                 >
                   Contact Me

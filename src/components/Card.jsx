@@ -19,7 +19,7 @@ const Card = ({
       swal("Oops!", "This project isn't published yet!", "warning");
     } else {
       // Replace with your navigation logic
-      window.location.href = `/portfolio/${projectPath}`
+      window.location.href = `/paid-portfolio/portfolio/${projectPath}`
     }
   }
   return cardType === "vertical" ? (

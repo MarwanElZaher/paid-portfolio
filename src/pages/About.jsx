@@ -135,7 +135,9 @@ const About = () => {
           </div>
         </div>
       </section>
-      <VideoPlayer url="https://player.vimeo.com/video/1019117050" />
+      <section>
+        <VideoPlayer url="https://player.vimeo.com/video/1019117050" />
+      </section>
       <section className="w-full h-auto overflow-hidden my-36 px-6 md:px-10">
         <div className="flex flex-col">
           <div className="flex justify-center items-center">

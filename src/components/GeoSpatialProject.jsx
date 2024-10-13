@@ -158,7 +158,7 @@ const GeoSpatialProject = () => {
                 />
                 <div className='flex items-center justify-center mt-4 p-20'>
                     <NavItem
-                        to="/contactme"
+                        to="/paid-portfolio/contactme"
                         classname="bg-black text-white rounded-full p-2 transition duration-300 hover:bg-gray-500 hover:scale-x-105"
                     >
                         Let’s work together
@@ -179,7 +179,7 @@ const GeoSpatialProject = () => {
                         <CustomButton
                             className='uppercase rounded-full bg-black text-white p-4 font-custom font-medium hover:bg-[#6e6e6b] hover:scale-110 transition-all duration-300'
                             text="View More"
-                            to="/portfolio"
+                            to="/paid-portfolio/portfolio"
                         />
                     </div>
                 </div>
