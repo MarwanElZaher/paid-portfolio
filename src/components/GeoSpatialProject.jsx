@@ -5,13 +5,12 @@ import MainGeoSpatialImg from "../assets/geoSpatial.svg"
 import NavItem from "./NavItem";
 import ProjectList from "./ProjectsList";
 import CustomButton from "./CustomButton";
+
 const GeoSpatialProject = () => {
-    const { ref: videoRef, isVisible: videoVisible } = useIntersectionObserver({
-        threshold: 0.2,
-    });
+    const { ref: videoRef, isVisible: videoVisible } = useIntersectionObserver({ threshold: 0.2 });
     const { ref: projectsRef, isVisible: recentProjectsVisible } = useIntersectionObserver({ threshold: 0.2 });
 
-    const { technologies, Challenge, Approach, aboutTheProjectDetails, secondSection, projectObjectiveDetails, stakeholderFindings, technicalFindings, additionalNotes, interviewDetails, researchData, userResearchFindings, marketResearchFindings, userPersona, informationArchitecture, siteMapContent, visualDesignContent, methedologiesContent, lessonsLearned } = recentProjects.filter((project) => project.projectPath == "geo-spatial")[0];
+    const { technologies, Challenge, Approach, aboutTheProjectDetails, secondSection, visualDesignContent } = recentProjects.filter((project) => project.projectPath === "geo-spatial")[0];
     const otherProjects = recentProjects.filter((project) => project.projectPath !== "geo-spatial");
 
     return (
@@ -19,16 +18,13 @@ const GeoSpatialProject = () => {
             <section className="w-full h-auto overflow-hidden my-10">
                 <div className="flex flex-col md:flex-row w-full">
                     {/* Left section: Title and description */}
-                    <div className="sm:w-2/3 md:w-2/3 lg:w-2/3 flex flex-col justify-center items-start p-10">
+                    <div className="sm:w-full md:w-2/3 lg:w-2/3 flex flex-col justify-center items-start p-5 md:p-10">
                         <div
-                            className={`transition-all duration-1000 ${videoVisible
-                                ? 'translate-y-0 opacity-100'
-                                : 'translate-y-20 opacity-0'
-                                }`}
+                            className={`transition-all duration-1000 ${videoVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
                         >
                             <h1
                                 ref={videoRef}
-                                className="uppercase cursor-default font-custom font-medium text-6xl md:text-9xl w-full mb-4"
+                                className="uppercase cursor-default font-custom font-medium text-4xl sm:text-5xl md:text-6xl lg:text-9xl w-full mb-4"
                             >
                                 {GEOSpatialTitle}
                             </h1>
@@ -37,7 +33,7 @@ const GeoSpatialProject = () => {
                                     <button
                                         key={index}
                                         title={tech}
-                                        className={`uppercase rounded-full font-medium flex flex-wrap gap-2 text-xs px-4 py-2 md:text-sm lg:text-xs ${index > 0 ? " border-2 border-[#12120F80]" : "bg-[#12120F80] text-white"}`}
+                                        className={`uppercase rounded-full font-medium flex flex-wrap gap-2 text-xs px-4 py-2 ${index > 0 ? "border-2 border-[#12120F80]" : "bg-[#12120F80] text-white"}`}
                                         disabled
                                     >
                                         {tech}
@@ -49,8 +45,8 @@ const GeoSpatialProject = () => {
 
                     {/* Right section: Empty */}
                     <div className="hidden md:block md:w-1/3"></div>
-
                 </div>
+
                 <div className="flex justify-center w-full mt-8 bg-[#DDEA64] pt-10 rounded-3xl">
                     <img
                         src={MainGeoSpatialImg}
@@ -59,48 +55,41 @@ const GeoSpatialProject = () => {
                         className="w-4/5 object-cover h-auto"
                     />
                 </div>
-
             </section>
-            <section className="p-10">
-                <div className="flex flex-row justify-between">
-                    <div className="w-2/6">
-                        <h2 className="text-6xl font-medium uppercase ">
+
+            <section className="p-5 md:p-10">
+                <div className="flex flex-col md:flex-row justify-between">
+                    <div className="w-full md:w-2/6 mb-4 md:mb-0">
+                        <h2 className="text-4xl md:text-6xl font-medium uppercase ">
                             {AboutProject}
                         </h2>
                     </div>
-                    <div className="flex flex-col gap-8 w-3/6">
+                    <div className="flex flex-col gap-8 w-full md:w-3/6">
                         <div className="mr-10">
-                            <h4 className="text-2xl font-medium mb-4">
-                                Challenge
-                            </h4>
+                            <h4 className="text-2xl font-medium mb-4">Challenge</h4>
                             <p className="text-lg font-normal">{Challenge}</p>
                         </div>
 
                         <div className="mr-10">
-                            <h4 className="text-2xl font-medium mb-4">
-                                Approach
-                            </h4>
+                            <h4 className="text-2xl font-medium mb-4">Approach</h4>
                             <p className="text-lg font-normal">{Approach}</p>
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row justify-between mt-20">
-                    {Object.entries(aboutTheProjectDetails).map(([key, value]) =>
-                        <div
-                            className="flex flex-col"
-                            key={key}
-                        >
+                <div className="flex flex-col md:flex-row justify-between mt-20">
+                    {Object.entries(aboutTheProjectDetails).map(([key, value]) => (
+                        <div className="flex flex-col" key={key}>
                             <h4 className="font-medium text-2xl">{key}</h4>
                             <p className="font-normal text-lg">{value}</p>
-                        </div>)}
-
+                        </div>
+                    ))}
                 </div>
-
             </section>
-            <section className="p-10">
-                <div className="flex flex-row justify-between gap-10 my-20">
+
+            <section className="p-5 md:p-10">
+                <div className="flex flex-col md:flex-row justify-between gap-10 my-20">
                     {Object.entries(secondSection).map(([key, value]) => (
-                        <div key={key} className="flex flex-col w-3/5">
+                        <div key={key} className="flex flex-col w-full md:w-3/5 mb-10 md:mb-0">
                             <h3 className="font-medium text-3xl mb-4">{key}</h3>
                             {Array.isArray(value) ? (
                                 value.map((item, index) => (
@@ -129,14 +118,11 @@ const GeoSpatialProject = () => {
                         </div>
                     ))}
                 </div>
-
-
-
             </section>
-            <section>
-                <div className="p-10">
-                    <h2 className="text-2xl font-bold mb-4">{visualDesignContent.VISUAL_DESIGN_HEADING}</h2>
 
+            <section>
+                <div className="p-5 md:p-10">
+                    <h2 className="text-2xl font-bold mb-4">{visualDesignContent.VISUAL_DESIGN_HEADING}</h2>
                 </div>
                 <img
                     src={visualDesignContent.VISUAL_DESIGN_IMAGE}
@@ -158,13 +144,14 @@ const GeoSpatialProject = () => {
                 />
                 <div className='flex items-center justify-center mt-4 p-20'>
                     <NavItem
-                        to="/paid-portfolio/contactme"
+                        to="/contactme"
                         classname="bg-black text-white rounded-full p-2 transition duration-300 hover:bg-gray-500 hover:scale-x-105"
                     >
                         Let’s work together
                     </NavItem>
                 </div>
             </section>
+
             <section className="flex flex-col justify-center items-center min-h-screen">
                 <div className={`w-full gap-8 border-t border-b border-grey-800 flex flex-col items-center py-10 md:gap-8 md:py-15 lg:py-20 lg:gap-12 transition-all duration-1000 ${recentProjectsVisible ? 'scale-75 md:scale-80 lg:scale-95' : 'scale-70 md:scale-75 lg:scale-90'}`}>
                     <div className='flex flex-col items-center'>
@@ -179,13 +166,13 @@ const GeoSpatialProject = () => {
                         <CustomButton
                             className='uppercase rounded-full bg-black text-white p-4 font-custom font-medium hover:bg-[#6e6e6b] hover:scale-110 transition-all duration-300'
                             text="View More"
-                            to="/paid-portfolio/portfolio"
+                            to="/portfolio"
                         />
                     </div>
                 </div>
             </section>
-
-        </main>)
+        </main>
+    )
 }
 
 export default GeoSpatialProject;

@@ -16,16 +16,16 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="mb-4">
             <h1 className='font-custom font-bold text-2xl'>
-              <Link to="/paid-portfolio">HS</Link>
+              <Link to="/">HS</Link>
             </h1>
           </div>
 
           {/* Navigation Links */}
           <ul className="list-none flex flex-col md:flex-row justify-center gap-4 mb-4">
-            <NavItem classname="text-white hover:bg-white hover:text-black" to="/paid-portfolio/portfolio">Portfolio</NavItem>
-            <NavItem classname="text-white hover:bg-white hover:text-black" to="/paid-portfolio/services">Services</NavItem>
-            <NavItem classname="text-white hover:bg-white hover:text-black" to="/paid-portfolio/contactme">Contact Me</NavItem>
-            <NavItem classname="text-white hover:bg-white hover:text-black" to="/paid-portfolio/about">About</NavItem>
+            <NavItem classname="text-white hover:bg-white hover:text-black" to="/portfolio">Portfolio</NavItem>
+            <NavItem classname="text-white hover:bg-white hover:text-black" to="/services">Services</NavItem>
+            <NavItem classname="text-white hover:bg-white hover:text-black" to="/contactme">Contact Me</NavItem>
+            <NavItem classname="text-white hover:bg-white hover:text-black" to="/about">About</NavItem>
           </ul>
 
           {/* Social Links */}

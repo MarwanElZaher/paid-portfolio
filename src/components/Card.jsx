@@ -19,7 +19,7 @@ const Card = ({
       swal("Oops!", "This project isn't published yet!", "warning");
     } else {
       // Replace with your navigation logic
-      window.location.href = `/paid-portfolio/${projectPath}`
+      window.location.href = `/${projectPath}`
     }
   }
   return cardType === "vertical" ? (
@@ -27,8 +27,8 @@ const Card = ({
       onClick={handleProjectView}
       className={`flex flex-col rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:rounded-2xl cursor-pointer`}>
       {/* Image section with the first background color */}
-      <div className={`${bgColor1} flex justify-center h-3/4 px-8 py-12 md:p-16 lg:py-20 lg:px-10`}>
-        {imgSrc && <img src={imgSrc} alt={imgAlt} loading="lazy" className="w-full h-auto rounded-lg" />}
+      <div className={`${bgColor1} flex justify-center items-center h-3/4 px-8 py-12 md:p-16 lg:py-20 lg:px-10`}>
+        {imgSrc && <img src={imgSrc} alt={imgAlt} loading="lazy" className="w-full h-3/4 md:h-auto lg:h-auto rounded-lg" />}
       </div>
 
       {/* Content section with the second background color */}

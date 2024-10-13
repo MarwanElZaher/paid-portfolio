@@ -22,7 +22,7 @@ const BannerFooter = () => {
                     {bannerFooterSecondText}
                 </p>
                 <NavItem
-                    to="/paid-portfolio/contactme"
+                    to="/contactme"
                     classname="bg-white text-black rounded-full py-3 px-6 transition duration-300 hover:bg-gray-300 text-lg md:text-xl" // Responsive text size
                 >
                     Contact Me

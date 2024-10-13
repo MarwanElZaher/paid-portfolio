@@ -60,9 +60,8 @@ const About = () => {
             src={firstAboutImg}
             loading="lazy"
             alt="Hossam IMG"
-            className="rounded-3xl w-full md:w-2/3 object-cover"
+            className="rounded-3xl w-full object-cover"
           />
-          <VideoPlayer parentClassName="relative w-full rounded-3xl shadow-lg" childClassName="absolute top-0 left-0 h-full w-full rounded-3xl shadow-lg " url="https://player.vimeo.com/video/1019117004" />
         </div>
       </section>
 
@@ -143,11 +142,11 @@ const About = () => {
           <div className="flex justify-center items-center">
             <p className="font-custom font-medium text-5xl md:text-6xl uppercase mb-12">{valuedClients}</p>
           </div>
-          <div className="flex flex-col items-center border-y-2 p-10 border-[#E6E6E3] md:flex-row lg:flex-row justify-center gap-16">
+          <div className="flex flex-col items-center border-y-2 p-10 border-[#E6E6E3] md:flex-col lg:flex-row justify-center gap-16">
             {/* Insert client logos here */}
-            <img src={AHR} loading="lazy" alt="Client 1" className="w-1/12 h-full object-fit" />
-            <img src={Group} loading="lazy" alt="Client 2" className="w-1/12 h-full object-fit" />
-            <img src={Pentab} loading="lazy" alt="Client 3" className="w-1/12 h-full object-fit" />
+            <img src={AHR} loading="lazy" alt="Client 1" className="w-2/3  md:w-1/12 lg:w-1/12 h-full object-fit" />
+            <img src={Group} loading="lazy" alt="Client 2" className="w-2/3  md:w-1/12 lg:w-1/12 h-full object-fit" />
+            <img src={Pentab} loading="lazy" alt="Client 3" className="w-2/3  md:w-1/12 lg:w-1/12 h-full object-fit" />
           </div>
         </div>
       </section>

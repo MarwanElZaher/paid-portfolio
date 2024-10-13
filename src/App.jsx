@@ -18,13 +18,13 @@ const App = () => {
       <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path="/paid-portfolio" element={<Home />} />
-        <Route path="/paid-portfolio/portfolio" element={<Portfolio />} />
-        <Route path="/paid-portfolio/services" element={<Services />} />
-        <Route path="/paid-portfolio/about" element={<About />} />
-        <Route path="/paid-portfolio/contactme" element={<ContactMe />} />
-        <Route path="/paid-portfolio/pbpm" element={<PBPMProject />} />
-        <Route path="/paid-portfolio/geo-spatial" element={<GeoSpatialProject />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contactme" element={<ContactMe />} />
+        <Route path="/pbpm" element={<PBPMProject />} />
+        <Route path="/geo-spatial" element={<GeoSpatialProject />} />
       </Routes>
       <Footer />
     </Router>
