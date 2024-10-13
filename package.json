@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://MarwanElZaher.github.io/paid-portfolio/",
+  "homepage": "https://www.hossamsaieeduiux.com/paid-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
