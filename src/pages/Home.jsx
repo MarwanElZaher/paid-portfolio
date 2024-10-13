@@ -29,7 +29,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-col justify-center items-center min-h-screen">
+      <section className="flex flex-col justify-center items-center lg:min-h-screen my-6">
         <div className={`flex flex-col items-center text-center gap-4 max-w-6xl md:gap-6 lg:gap-8 transition-all duration-1000 ${textVisible ? 'scale-95' : 'scale-75'}`}>
           <img src={DiamondIcon} loading="lazy" alt='diamondIcon' className="w-8 lg:w-16" />
           <h1 ref={textRef} className='uppercase font-custom font-medium text-3xl md:text-5xl lg:text-7xl lg:px-10 lg:mx-10'>{homePageSecondSectionText}</h1>
@@ -43,7 +43,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-col justify-center items-center min-h-screen">
+      <section className="flex flex-col justify-center items-center lg:min-h-screen">
         <div className={`w-full gap-8 border-t border-b border-grey-800 flex flex-col items-center py-10 md:gap-8 md:py-15 lg:py-20 lg:gap-12 transition-all duration-1000 ${recentProjectsVisible ? 'scale-75 md:scale-80 lg:scale-95' : 'scale-70 md:scale-75 lg:scale-90'}`}>
           <div className='flex flex-col items-center'>
             <p className='uppercase font-custom font-medium text-3xl px-10 m-1 md:text-5xl lg:text-7xl'>{recentProjectsTitleFirstPart}</p>
