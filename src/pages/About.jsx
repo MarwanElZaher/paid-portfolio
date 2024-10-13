@@ -24,7 +24,7 @@ import {
 } from "../constants";
 import DiamondIcon from '../assets/Vector.svg';
 import Card from "../components/Card";
-import AboutVideoH from '../assets/AboutVideoH.mp4'
+import VideoPlayer from "../components/VideoPlayer";
 const About = () => {
   const { ref: videoRef, isVisible: videoVisible } = useIntersectionObserver({
     threshold: 0.2,
@@ -63,10 +63,7 @@ const About = () => {
             alt="Hossam IMG"
             className="rounded-3xl w-full md:w-2/3 object-cover"
           />
-          <video loading="lazy" className='rounded-3xl w-full md:w-1/3 object-cover' autoPlay muted controls={false} loop playsInline>
-
-            <source src={VerticalView} type="video/mp4" />
-          </video>
+          <VideoPlayer url="https://player.vimeo.com/video/1019117004" />
         </div>
       </section>
 
@@ -139,11 +136,7 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      <video loading="lazy" className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline >
-        <source src={AboutVideoH} type="video/mp4" />
-      </video>
-
+      <VideoPlayer url="https://player.vimeo.com/video/1019117050" />
       <section className="w-full h-auto overflow-hidden my-36 px-6 md:px-10">
         <div className="flex flex-col">
           <div className="flex justify-center items-center">

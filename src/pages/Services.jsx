@@ -3,7 +3,6 @@ import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import ServicesVideo from '../assets/serviceVideo.png';
 import ServiceImg from '../assets/serviceImg.jpg';
 import DiamondIcon from '../assets/Vector.svg';
-import HorizontalView from '../assets/horizontalView.mp4'
 import {
   providedServices,
   secondSectionTitle,
@@ -15,6 +14,7 @@ import {
 } from '../constants';
 import Card from '../components/Card';
 import NavItem from '../components/NavItem';
+import VideoPlayer from '../components/VideoPlayer';
 
 const Services = () => {
   const { ref: videoRef, isVisible: videoVisible } = useIntersectionObserver({
@@ -49,10 +49,9 @@ const Services = () => {
 
         {/* Images below the content */}
         <div className="flex flex-row w-full mt-8">
-          <video loading="lazy" className='z-10 w-full object-cover rounded-3xl' autoPlay muted controls={false} loop playsInline>
+          <VideoPlayer url="https://player.vimeo.com/video/1019116813" />
 
-            <source src={HorizontalView} type="video/mp4" />
-          </video>
+
           <img
             src={ServicesVideo}
             loading="lazy"
