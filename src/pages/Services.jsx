@@ -1,6 +1,6 @@
 import React from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import NewServiceImg from '../assets/newService.jpg';
+import NewServiceImg from '../assets/NewServiceImgSmall.png';
 import DiamondIcon from '../assets/Vector.svg';
 import {
   providedServices,
