@@ -62,7 +62,7 @@ const About = () => {
             alt="Hossam IMG"
             className="rounded-3xl w-full md:w-2/3 object-cover"
           />
-          <VideoPlayer url="https://player.vimeo.com/video/1019117004" />
+          <VideoPlayer parentClassName="relative w-full rounded-3xl shadow-lg" childClassName="absolute top-0 left-0 h-full w-full rounded-3xl shadow-lg " url="https://player.vimeo.com/video/1019117004" />
         </div>
       </section>
 
