@@ -4,7 +4,6 @@ import firstAboutImg from '../assets/firstAbout.jpg';
 import AHR from '../assets/AHR.svg';
 import Group from '../assets/Group.svg';
 import Pentab from '../assets/Pentab.svg';
-import VerticalView from "../assets/verticalViewAbout.mp4"
 import {
   aboutDescription,
   aboutTitle,
