@@ -1,6 +1,5 @@
 import React from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import ServicesVideo from '../assets/serviceVideo.png';
 import ServiceImg from '../assets/serviceImg.jpg';
 import DiamondIcon from '../assets/Vector.svg';
 import {
@@ -47,17 +46,8 @@ const Services = () => {
           <div className="hidden md:block md:w-1/3"></div>
         </div>
 
-        {/* Images below the content */}
         <div className="flex flex-row w-full mt-8">
           <VideoPlayer url="https://player.vimeo.com/video/1019116813" />
-
-
-          <img
-            src={ServicesVideo}
-            loading="lazy"
-            alt="Service Video"
-            className="w-full object-cover h-64 md:h-auto"
-          />
         </div>
       </section>
 
