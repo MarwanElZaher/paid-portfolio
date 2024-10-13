@@ -1,9 +1,9 @@
 import React from "react";
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import firstAboutImg from '../assets/firstAbout.jpg';
-import AHR from '../assets/AHR.svg';
-import Group from '../assets/Group.svg';
-import Pentab from '../assets/Pentab.svg';
+import AHR from '../assets/AHR.jpg';
+import Group from '../assets/Group.jpg';
+import Pentab from '../assets/Pentab.jpg';
 import {
   aboutDescription,
   aboutTitle,
