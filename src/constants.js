@@ -282,6 +282,7 @@ export const recentProjects = [
     lessonsLearned: {
       title: "Design System",
       publicationStatus: "Soon will be published",
+      whatIlearned: "Lessons i have learned",
       content: `In my PBPM project, I faced significant challenges ensuring that my designs met both user needs and business objectives while being effectively sold to new customers. Due to top management's directive to move on to the next phase prematurely, my designs were not implemented as intended, highlighting the need for better communication with developers. To resolve this, I prioritized open dialogue and proposed a new communication framework to the CEO, which improved task management and allowed us to measure the impact of our designs on key performance indicators. This initiative led to a remarkable improvement in our communication processes, enabling developers to complete their work twice as fast. Ultimately, these efforts contributed to a successful product launch, underscoring the importance of collaboration and effective design implementation.`
     },
   },

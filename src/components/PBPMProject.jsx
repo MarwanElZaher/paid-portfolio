@@ -410,9 +410,14 @@ const PBPMProject = () => {
                     </div>
                 </div>
                 <div className="my-10">
-                    <h2 className="text-2xl font-bold mb-4">{lessonsLearned.title}</h2>
-                    <p className="text-lg italic mb-4">{lessonsLearned.publicationStatus}</p>
-                    <p>{lessonsLearned.content}</p>
+                    <div className="mb-8">
+                        <h2 className="text-2xl font-bold mb-4">{lessonsLearned.title}</h2>
+                        <p className="text-lg italic mb-4">{lessonsLearned.publicationStatus}</p>
+                    </div>
+                    <div className="mb-4">
+                        <h2 className="text-2xl font-bold mb-4">{lessonsLearned.whatIlearned}</h2>
+                        <p>{lessonsLearned.content}</p>
+                    </div>
                 </div>
 
                 <div className='flex items-center justify-center mt-4'>
