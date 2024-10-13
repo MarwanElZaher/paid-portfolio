@@ -1,6 +1,6 @@
 import React from "react";
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import firstAboutImg from '../assets/firstAbout.jpg';
+import firstAboutImg from '../assets/firstAbout.png';
 import AHR from '../assets/AHR.png';
 import Group from '../assets/Group.png';
 import Pentab from '../assets/Pentab.png';
