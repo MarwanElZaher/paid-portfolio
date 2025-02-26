@@ -46,6 +46,7 @@ const Navbar = () => {
           <NavItem to="/about" isActive={location.pathname === '/about'}>About</NavItem>
           <NavItem to="/services" isActive={location.pathname === '/services'}>Services</NavItem>
           <NavItem to="/contactme" isActive={location.pathname === '/contactme'}>Contact Me</NavItem>
+          <NavItem classname="bg-black text-white  hover:border-black hover:bg-white hover:text-black hover:pl-[20px] hover:pr-[20px]" >REQUEST PDF PORTFOLIO</NavItem>
         </ul>
 
         {/* Mobile Menu (visible only on small screens) */}
@@ -54,6 +55,7 @@ const Navbar = () => {
           <NavItem onClick={closeMenu} to="/about" isActive={location.pathname === '/about'}>About</NavItem>
           <NavItem onClick={closeMenu} to="/services" isActive={location.pathname === '/services'}>Services</NavItem>
           <NavItem onClick={closeMenu} to="/contactme" isActive={location.pathname === '/contactme'}>Contact Me</NavItem>
+          <NavItem classname="bg-black text-white  hover:border-black hover:bg-white hover:text-black hover:pl-[20px] hover:pr-[20px]" >REQUEST PDF PORTFOLIO</NavItem>
         </ul>
       </nav>
       <MarqueeBar />

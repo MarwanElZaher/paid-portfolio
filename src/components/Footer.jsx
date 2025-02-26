@@ -26,6 +26,7 @@ const Footer = () => {
             <NavItem classname="text-white hover:bg-white hover:text-black" to="/services">Services</NavItem>
             <NavItem classname="text-white hover:bg-white hover:text-black" to="/contactme">Contact Me</NavItem>
             <NavItem classname="text-white hover:bg-white hover:text-black" to="/about">About</NavItem>
+            <NavItem classname="bg-black text-white  hover:border-black hover:bg-white hover:text-black hover:pl-[20px] hover:pr-[20px]" > REQUEST PDF PORTFOLIO</NavItem>
           </ul>
 
           {/* Social Links */}
